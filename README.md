@@ -266,7 +266,7 @@ WilddogGeo 需要 Wilddog 来同步和存储数据。您可以在这里[注册](
 
 
 ## 支持
-如果在使用过程中有任何问题，请提 [issue](https://github.com/WildDogTeam/demo-ios-wilddoggeo/issues) ，我会在 Github 上给予帮助。
+如果在使用过程中有任何问题，请提 [issue](https://github.com/WildDogTeam/lib-ios-wilddoggeo/issues) ，我会在 Github 上给予帮助。
 
 ## 相关文档
 
