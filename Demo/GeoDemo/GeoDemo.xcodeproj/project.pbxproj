@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA2E64711BB53EFA006E3918 /* GeoDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2E64701BB53EFA006E3918 /* GeoDemoTests.m */; };
+		EA2E647C1BB53EFA006E3918 /* GeoDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2E647B1BB53EFA006E3918 /* GeoDemoUITests.m */; };
+		EA2E64921BB540D2006E3918 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2E64911BB540D2006E3918 /* MapKit.framework */; };
+		EA2E64991BB54611006E3918 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2E64981BB54611006E3918 /* JavaScriptCore.framework */; };
+		EA4CF1731BC68C07002F6735 /* aninotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1661BC68C07002F6735 /* aninotation.m */; settings = {ASSET_TAGS = (); }; };
+		EA4CF1741BC68C07002F6735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1681BC68C07002F6735 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		EA4CF1751BC68C07002F6735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF1691BC68C07002F6735 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		EA4CF1761BC68C07002F6735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16A1BC68C07002F6735 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EA4CF1771BC68C07002F6735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16C1BC68C07002F6735 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		EA4CF1781BC68C07002F6735 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16E1BC68C07002F6735 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		EA4CF1791BC68C07002F6735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF16F1BC68C07002F6735 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		EA4CF17A1BC68C07002F6735 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1711BC68C07002F6735 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		EA4CF17B1BC68C07002F6735 /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4CF1721BC68C07002F6735 /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
+		EA77F9E41BC686AA009A70EA /* libWilddogGeo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77F9D11BC66693009A70EA /* libWilddogGeo.a */; };
+		EA77F9E61BC68782009A70EA /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77F9E51BC68782009A70EA /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA2E646D1BB53EFA006E3918 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA2E644B1BB53EFA006E3918 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA2E64521BB53EFA006E3918;
+			remoteInfo = GeoDemo;
+		};
+		EA2E64781BB53EFA006E3918 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA2E644B1BB53EFA006E3918 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA2E64521BB53EFA006E3918;
+			remoteInfo = GeoDemo;
+		};
+		EA77F9D01BC66693009A70EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA77F9BC1BC6638B009A70EA;
+			remoteInfo = WilddogGeo;
+		};
+		EA77F9E11BC6869C009A70EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA77F9BB1BC6638B009A70EA;
+			remoteInfo = WilddogGeo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA2E64531BB53EFA006E3918 /* GeoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2E646C1BB53EFA006E3918 /* GeoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2E64701BB53EFA006E3918 /* GeoDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoDemoTests.m; sourceTree = "<group>"; };
+		EA2E64721BB53EFA006E3918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2E64771BB53EFA006E3918 /* GeoDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA2E647B1BB53EFA006E3918 /* GeoDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoDemoUITests.m; sourceTree = "<group>"; };
+		EA2E647D1BB53EFA006E3918 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2E64911BB540D2006E3918 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		EA2E64981BB54611006E3918 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EA4CF1651BC68C07002F6735 /* aninotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aninotation.h; sourceTree = "<group>"; };
+		EA4CF1661BC68C07002F6735 /* aninotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aninotation.m; sourceTree = "<group>"; };
+		EA4CF1671BC68C07002F6735 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA4CF1681BC68C07002F6735 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA4CF1691BC68C07002F6735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA4CF16B1BC68C07002F6735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA4CF16D1BC68C07002F6735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA4CF16E1BC68C07002F6735 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA4CF16F1BC68C07002F6735 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA4CF1701BC68C07002F6735 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA4CF1711BC68C07002F6735 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA4CF1721BC68C07002F6735 /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wilddog.framework; sourceTree = "<group>"; };
+		EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WilddogGeo.xcodeproj; path = ../../WilddogGeo.xcodeproj; sourceTree = "<group>"; };
+		EA77F9E51BC68782009A70EA /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wilddog.framework; path = GeoDemo/Wilddog.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA2E64501BB53EFA006E3918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77F9E41BC686AA009A70EA /* libWilddogGeo.a in Frameworks */,
+				EA4CF17B1BC68C07002F6735 /* Wilddog.framework in Frameworks */,
+				EA2E64991BB54611006E3918 /* JavaScriptCore.framework in Frameworks */,
+				EA2E64921BB540D2006E3918 /* MapKit.framework in Frameworks */,
+				EA77F9E61BC68782009A70EA /* Wilddog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2E64691BB53EFA006E3918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2E64741BB53EFA006E3918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA2E644A1BB53EFA006E3918 = {
+			isa = PBXGroup;
+			children = (
+				EA4CF1641BC68C07002F6735 /* GeoDemo */,
+				EA77F9E51BC68782009A70EA /* Wilddog.framework */,
+				EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */,
+				EA2E64981BB54611006E3918 /* JavaScriptCore.framework */,
+				EA2E64911BB540D2006E3918 /* MapKit.framework */,
+				EA2E646F1BB53EFA006E3918 /* GeoDemoTests */,
+				EA2E647A1BB53EFA006E3918 /* GeoDemoUITests */,
+				EA2E64541BB53EFA006E3918 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA2E64541BB53EFA006E3918 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA2E64531BB53EFA006E3918 /* GeoDemo.app */,
+				EA2E646C1BB53EFA006E3918 /* GeoDemoTests.xctest */,
+				EA2E64771BB53EFA006E3918 /* GeoDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA2E646F1BB53EFA006E3918 /* GeoDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA2E64701BB53EFA006E3918 /* GeoDemoTests.m */,
+				EA2E64721BB53EFA006E3918 /* Info.plist */,
+			);
+			path = GeoDemoTests;
+			sourceTree = "<group>";
+		};
+		EA2E647A1BB53EFA006E3918 /* GeoDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA2E647B1BB53EFA006E3918 /* GeoDemoUITests.m */,
+				EA2E647D1BB53EFA006E3918 /* Info.plist */,
+			);
+			path = GeoDemoUITests;
+			sourceTree = "<group>";
+		};
+		EA4CF1641BC68C07002F6735 /* GeoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EA4CF1651BC68C07002F6735 /* aninotation.h */,
+				EA4CF1661BC68C07002F6735 /* aninotation.m */,
+				EA4CF1671BC68C07002F6735 /* AppDelegate.h */,
+				EA4CF1681BC68C07002F6735 /* AppDelegate.m */,
+				EA4CF1691BC68C07002F6735 /* Assets.xcassets */,
+				EA4CF16A1BC68C07002F6735 /* LaunchScreen.storyboard */,
+				EA4CF16C1BC68C07002F6735 /* Main.storyboard */,
+				EA4CF16E1BC68C07002F6735 /* Info.plist */,
+				EA4CF16F1BC68C07002F6735 /* main.m */,
+				EA4CF1701BC68C07002F6735 /* ViewController.h */,
+				EA4CF1711BC68C07002F6735 /* ViewController.m */,
+				EA4CF1721BC68C07002F6735 /* Wilddog.framework */,
+			);
+			path = GeoDemo;
+			sourceTree = "<group>";
+		};
+		EA77F9CD1BC66693009A70EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA77F9D11BC66693009A70EA /* libWilddogGeo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA2E64521BB53EFA006E3918 /* GeoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2E64801BB53EFA006E3918 /* Build configuration list for PBXNativeTarget "GeoDemo" */;
+			buildPhases = (
+				EA2E644F1BB53EFA006E3918 /* Sources */,
+				EA2E64501BB53EFA006E3918 /* Frameworks */,
+				EA2E64511BB53EFA006E3918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA77F9E21BC6869C009A70EA /* PBXTargetDependency */,
+			);
+			name = GeoDemo;
+			productName = GeoDemo;
+			productReference = EA2E64531BB53EFA006E3918 /* GeoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA2E646B1BB53EFA006E3918 /* GeoDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2E64831BB53EFA006E3918 /* Build configuration list for PBXNativeTarget "GeoDemoTests" */;
+			buildPhases = (
+				EA2E64681BB53EFA006E3918 /* Sources */,
+				EA2E64691BB53EFA006E3918 /* Frameworks */,
+				EA2E646A1BB53EFA006E3918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA2E646E1BB53EFA006E3918 /* PBXTargetDependency */,
+			);
+			name = GeoDemoTests;
+			productName = GeoDemoTests;
+			productReference = EA2E646C1BB53EFA006E3918 /* GeoDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA2E64761BB53EFA006E3918 /* GeoDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA2E64861BB53EFA006E3918 /* Build configuration list for PBXNativeTarget "GeoDemoUITests" */;
+			buildPhases = (
+				EA2E64731BB53EFA006E3918 /* Sources */,
+				EA2E64741BB53EFA006E3918 /* Frameworks */,
+				EA2E64751BB53EFA006E3918 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA2E64791BB53EFA006E3918 /* PBXTargetDependency */,
+			);
+			name = GeoDemoUITests;
+			productName = GeoDemoUITests;
+			productReference = EA2E64771BB53EFA006E3918 /* GeoDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA2E644B1BB53EFA006E3918 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Wilddog;
+				TargetAttributes = {
+					EA2E64521BB53EFA006E3918 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					EA2E646B1BB53EFA006E3918 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = EA2E64521BB53EFA006E3918;
+					};
+					EA2E64761BB53EFA006E3918 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = EA2E64521BB53EFA006E3918;
+					};
+				};
+			};
+			buildConfigurationList = EA2E644E1BB53EFA006E3918 /* Build configuration list for PBXProject "GeoDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA2E644A1BB53EFA006E3918;
+			productRefGroup = EA2E64541BB53EFA006E3918 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA77F9CD1BC66693009A70EA /* Products */;
+					ProjectRef = EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				EA2E64521BB53EFA006E3918 /* GeoDemo */,
+				EA2E646B1BB53EFA006E3918 /* GeoDemoTests */,
+				EA2E64761BB53EFA006E3918 /* GeoDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EA77F9D11BC66693009A70EA /* libWilddogGeo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libWilddogGeo.a;
+			remoteRef = EA77F9D01BC66693009A70EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA2E64511BB53EFA006E3918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA4CF1781BC68C07002F6735 /* Info.plist in Resources */,
+				EA4CF1771BC68C07002F6735 /* Main.storyboard in Resources */,
+				EA4CF1751BC68C07002F6735 /* Assets.xcassets in Resources */,
+				EA4CF1761BC68C07002F6735 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2E646A1BB53EFA006E3918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2E64751BB53EFA006E3918 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA2E644F1BB53EFA006E3918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA4CF1741BC68C07002F6735 /* AppDelegate.m in Sources */,
+				EA4CF1791BC68C07002F6735 /* main.m in Sources */,
+				EA4CF17A1BC68C07002F6735 /* ViewController.m in Sources */,
+				EA4CF1731BC68C07002F6735 /* aninotation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2E64681BB53EFA006E3918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2E64711BB53EFA006E3918 /* GeoDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA2E64731BB53EFA006E3918 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2E647C1BB53EFA006E3918 /* GeoDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA2E646E1BB53EFA006E3918 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA2E64521BB53EFA006E3918 /* GeoDemo */;
+			targetProxy = EA2E646D1BB53EFA006E3918 /* PBXContainerItemProxy */;
+		};
+		EA2E64791BB53EFA006E3918 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA2E64521BB53EFA006E3918 /* GeoDemo */;
+			targetProxy = EA2E64781BB53EFA006E3918 /* PBXContainerItemProxy */;
+		};
+		EA77F9E21BC6869C009A70EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WilddogGeo;
+			targetProxy = EA77F9E11BC6869C009A70EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA4CF16A1BC68C07002F6735 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA4CF16B1BC68C07002F6735 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EA4CF16C1BC68C07002F6735 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA4CF16D1BC68C07002F6735 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA2E647E1BB53EFA006E3918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA2E647F1BB53EFA006E3918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA2E64811BB53EFA006E3918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GeoDemo",
+				);
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/../../WilddogGeo/API",
+					"${PROJECT_DIR}/GeoDemo",
+				);
+				INFOPLIST_FILE = GeoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = wilddog.GeoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA2E64821BB53EFA006E3918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/GeoDemo",
+				);
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/../../WilddogGeo/API",
+					"${PROJECT_DIR}/GeoDemo",
+				);
+				INFOPLIST_FILE = GeoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilddog.GeoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA2E64841BB53EFA006E3918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GeoDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilddog.GeoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoDemo.app/GeoDemo";
+			};
+			name = Debug;
+		};
+		EA2E64851BB53EFA006E3918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GeoDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilddog.GeoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoDemo.app/GeoDemo";
+			};
+			name = Release;
+		};
+		EA2E64871BB53EFA006E3918 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GeoDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilddog.GeoDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GeoDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EA2E64881BB53EFA006E3918 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GeoDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wilddog.GeoDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GeoDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA2E644E1BB53EFA006E3918 /* Build configuration list for PBXProject "GeoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2E647E1BB53EFA006E3918 /* Debug */,
+				EA2E647F1BB53EFA006E3918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2E64801BB53EFA006E3918 /* Build configuration list for PBXNativeTarget "GeoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2E64811BB53EFA006E3918 /* Debug */,
+				EA2E64821BB53EFA006E3918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2E64831BB53EFA006E3918 /* Build configuration list for PBXNativeTarget "GeoDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2E64841BB53EFA006E3918 /* Debug */,
+				EA2E64851BB53EFA006E3918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2E64861BB53EFA006E3918 /* Build configuration list for PBXNativeTarget "GeoDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA2E64871BB53EFA006E3918 /* Debug */,
+				EA2E64881BB53EFA006E3918 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA2E644B1BB53EFA006E3918 /* Project object */;
+}
