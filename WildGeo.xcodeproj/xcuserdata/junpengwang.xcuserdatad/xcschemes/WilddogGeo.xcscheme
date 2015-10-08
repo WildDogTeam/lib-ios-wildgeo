@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA77F9BB1BC6638B009A70EA"
-               BuildableName = "libWilddogGeo.a"
-               BlueprintName = "WilddogGeo"
-               ReferencedContainer = "container:WilddogGeo.xcodeproj">
+               BuildableName = "libWildGeo.a"
+               BlueprintName = "WildGeo"
+               ReferencedContainer = "container:WildGeo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,9 +46,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA77F9BB1BC6638B009A70EA"
-            BuildableName = "libWilddogGeo.a"
-            BlueprintName = "WilddogGeo"
-            ReferencedContainer = "container:WilddogGeo.xcodeproj">
+            BuildableName = "libWildGeo.a"
+            BlueprintName = "WildGeo"
+            ReferencedContainer = "container:WildGeo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,9 +64,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EA77F9BB1BC6638B009A70EA"
-            BuildableName = "libWilddogGeo.a"
-            BlueprintName = "WilddogGeo"
-            ReferencedContainer = "container:WilddogGeo.xcodeproj">
+            BuildableName = "libWildGeo.a"
+            BlueprintName = "WildGeo"
+            ReferencedContainer = "container:WildGeo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

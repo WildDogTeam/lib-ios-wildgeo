@@ -1,6 +1,6 @@
 //
 //  GWQuery+Private.h
-//  WilddogGeo
+//  WildGeo
 //
 //  Created by Jonny Dimond on 7/3/14.
 //  Copyright (c) 2014 wilddog. All rights reserved.
@@ -13,11 +13,11 @@
 #import "GWRegionQuery.h"
 #import "GWCircleQuery.h"
 
-@class WilddogGeo;
+@class WildGeo;
 
 @interface GWQuery (Private)
 
-- (id)initWithWilddogGeo:(WilddogGeo *)geoFire;
+- (id)initWithWildGeo:(WildGeo *)geoFire;
 - (BOOL)locationIsInQuery:(CLLocation *)location;
 - (void)searchCriteriaDidChange;
 - (NSSet *)queriesForCurrentCriteria;
@@ -26,7 +26,7 @@
 
 @interface GWCircleQuery (Private)
 
-- (id)initWithWilddogGeo:(WilddogGeo *)geoFire
+- (id)initWithWildGeo:(WildGeo *)geoFire
              location:(CLLocation *)location
                radius:(double)radius;
 
@@ -34,6 +34,6 @@
 
 @interface GWRegionQuery (Private)
 
-- (id)initWithWilddogGeo:(WilddogGeo *)geoFire region:(MKCoordinateRegion)region;
+- (id)initWithWildGeo:(WildGeo *)geoFire region:(MKCoordinateRegion)region;
 
 @end

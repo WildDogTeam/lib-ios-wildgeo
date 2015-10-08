@@ -1,5 +1,5 @@
 /*
- * wilddog WilddogGeo iOS Library
+ * wilddog WildGeo iOS Library
  *
  * Copyright © 2014 wilddog - All Rights Reserved
  * https://www.wilddog.com
@@ -40,26 +40,26 @@ typedef void (^GFCompletionBlock) (NSError *error);
 typedef void (^GFCallbackBlock) (CLLocation *location, NSError *error);
 
 /**
- * A WilddogGeo instance is used to store geo location data at a wilddog location.
+ * A WildGeo instance is used to store geo location data at a wilddog location.
  */
-@interface WilddogGeo : NSObject
+@interface WildGeo : NSObject
 
 /**
- * The wilddog reference this WilddogGeo instance uses.
+ * The wilddog reference this WildGeo instance uses.
  */
 @property (nonatomic, strong, readonly) Wilddog *wilddogRef;
 
 /**
- * The dispatch queue this WilddogGeo object and all its GFQueries use for callbacks.
+ * The dispatch queue this WildGeo object and all its GFQueries use for callbacks.
  */
 @property (nonatomic, strong) dispatch_queue_t callbackQueue;
 
-/** @name Creating new WilddogGeo objects */
+/** @name Creating new WildGeo objects */
 
 /**
- * Initializes a new WilddogGeo instance at the given wilddog location.
- * @param wilddog The wilddog location to attach this WilddogGeo instance to
- * @return The new WilddogGeo instance
+ * Initializes a new WildGeo instance at the given wilddog location.
+ * @param wilddog The wilddog location to attach this WildGeo instance to
+ * @return The new WildGeo instance
  */
 - (id)initWithWilddogRef:(Wilddog *)wilddog;
 
@@ -99,8 +99,8 @@ withCompletionBlock:(GFCompletionBlock)block;
 - (void)removeKey:(NSString *)key withCompletionBlock:(GFCompletionBlock)block;
 
 /**
- * Gets the current location for a key in WilddogGeo and calls the callback with the location or nil if there is no
- * location for the key in WilddogGeo. If an error occurred, the callback will be called with the error and location
+ * Gets the current location for a key in WildGeo and calls the callback with the location or nil if there is no
+ * location for the key in WildGeo. If an error occurred, the callback will be called with the error and location
  * will be nil.
  *
  * @param key The key to observe the location for
@@ -111,7 +111,7 @@ withCompletionBlock:(GFCompletionBlock)block;
              withCallback:(GFCallbackBlock)callback;
 
 /**
- * Creates a new WilddogGeo query centered at a given location with a given radius. The GWQuery object can be used to query
+ * Creates a new WildGeo query centered at a given location with a given radius. The GWQuery object can be used to query
  * keys that enter, move, and exit the search radius.
  * @param location The location at which the query is centered
  * @param radius The radius in kilometers of the geo query
@@ -121,7 +121,7 @@ withCompletionBlock:(GFCompletionBlock)block;
                         withRadius:(double)radius;
 
 /**
- * Creates a new WilddogGeo query for a given region. The GWQuery object can be used to query
+ * Creates a new WildGeo query for a given region. The GWQuery object can be used to query
  * keys that enter, move, and exit the search region.
  * @param region The region which this query searches
  * @return The GWRegionQuery object that can be used for geo queries.

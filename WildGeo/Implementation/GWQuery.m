@@ -1,6 +1,6 @@
 //
 //  GWQuery.m
-//  WilddogGeo
+//  WildGeo
 //
 //  Created by Jonny Dimond on 7/3/14.
 //  Copyright (c) 2014 wilddog. All rights reserved.
@@ -10,8 +10,8 @@
 #import "GWRegionQuery.h"
 #import "GWCircleQuery.h"
 #import "GWQuery+Private.h"
-#import "WilddogGeo.h"
-#import "WilddogGeo+Private.h"
+#import "WildGeo.h"
+#import "WildGeo+Private.h"
 #import "GWGeoHashQuery.h"
 #import <Wilddog/Wilddog.h>
 
@@ -48,11 +48,11 @@
 
 @synthesize radius = _radius;
 
-- (id)initWithWilddogGeo:(WilddogGeo *)geoFire
+- (id)initWithWildGeo:(WildGeo *)geoFire
              location:(CLLocation *)location
                radius:(double)radius
 {
-    self = [super initWithWilddogGeo:geoFire];
+    self = [super initWithWildGeo:geoFire];
     if (self != nil) {
         if (!CLLocationCoordinate2DIsValid(location.coordinate)) {
             [NSException raise:NSInvalidArgumentException
@@ -120,10 +120,10 @@
 
 @synthesize region = _region;
 
-- (id)initWithWilddogGeo:(WilddogGeo *)geoFire
+- (id)initWithWildGeo:(WildGeo *)geoFire
                region:(MKCoordinateRegion)region;
 {
-    self = [super initWithWilddogGeo:geoFire];
+    self = [super initWithWildGeo:geoFire];
     if (self != nil) {
         _region = region;
     }
@@ -169,7 +169,7 @@
 @interface GWQuery ()
 
 @property (nonatomic, strong) NSMutableDictionary *locationInfos;
-@property (nonatomic, strong) WilddogGeo *geoFire;
+@property (nonatomic, strong) WildGeo *geoFire;
 @property (nonatomic, strong) NSSet *queries;
 @property (nonatomic, strong) NSMutableDictionary *wilddogHandles;
 @property (nonatomic, strong) NSMutableSet *outstandingQueries;
@@ -184,7 +184,7 @@
 
 @implementation GWQuery
 
-- (id)initWithWilddogGeo:(WilddogGeo *)geoFire
+- (id)initWithWildGeo:(WildGeo *)geoFire
 {
     self = [super init];
     if (self != nil) {
@@ -260,7 +260,7 @@
 - (void)childAdded:(WDataSnapshot *)snapshot
 {
     @synchronized(self) {
-        CLLocation *location = [WilddogGeo locationFromValue:snapshot.value];
+        CLLocation *location = [WildGeo locationFromValue:snapshot.value];
         if (location != nil) {
             [self updateLocationInfo:location forKey:snapshot.key];
         } else {
@@ -272,7 +272,7 @@
 - (void)childChanged:(WDataSnapshot *)snapshot
 {
     @synchronized(self) {
-        CLLocation *location = [WilddogGeo locationFromValue:snapshot.value];
+        CLLocation *location = [WildGeo locationFromValue:snapshot.value];
         if (location != nil) {
             [self updateLocationInfo:location forKey:snapshot.key];
         } else {
@@ -289,7 +289,7 @@
         if (info != nil) {
             [[self.geoFire wilddogRefForLocationKey:snapshot.key] observeSingleEventOfType:WEventTypeValue withBlock:^(WDataSnapshot *snapshot) {
                 @synchronized(self) {
-                    CLLocation *location = [WilddogGeo locationFromValue:snapshot.value];
+                    CLLocation *location = [WildGeo locationFromValue:snapshot.value];
                     GWGeoHash *geoHash = (location) ? [[GWGeoHash alloc] initWithLocation:location.coordinate] : nil;
                     // Only notify observers if key is not part of any other geohash query or this actually might not be
                     // a key exited event, but a key moved or entered event. These events will be triggered by updates

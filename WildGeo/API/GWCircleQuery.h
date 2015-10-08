@@ -1,6 +1,6 @@
 //
 //  GWCircleQuery.h
-//  WilddogGeo
+//  WildGeo
 //
 //  Created by Jonny Dimond on 7/11/14.
 //  Copyright (c) 2014 wilddog. All rights reserved.

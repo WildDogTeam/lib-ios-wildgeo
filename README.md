@@ -1,33 +1,33 @@
-# WilddogGeo for iOS — Realtime location queries with Wilddog
+# WildGeo for iOS — Realtime location queries with Wilddog
 
-WilddogGeo is an open-source library for iOS that allows you to store and query a
+WildGeo is an open-source library for iOS that allows you to store and query a
 set of keys based on their geographic location.
 
-At its heart, WilddogGeo simply stores locations with string keys. Its main
+At its heart, WildGeo simply stores locations with string keys. Its main
 benefit however, is the possibility of querying keys within a given geographic
 area - all in realtime.
 
-WilddogGeo uses the [Wilddog](https://www.wilddog.com/) database for
+WildGeo uses the [Wilddog](https://www.wilddog.com/) database for
 data storage, allowing query results to be updated in realtime as they change.
-WilddogGeo *selectively loads only the data near certain locations, keeping your
+WildGeo *selectively loads only the data near certain locations, keeping your
 applications light and responsive*, even with extremely large datasets.
 
-A compatible WilddogGeo client is also available for [JavaScript](https://github.com/WildDogTeam/lib-js-wildgeo).
+A compatible WildGeo client is also available for [JavaScript](https://github.com/WildDogTeam/lib-js-wildgeo).
 
-### Integrating WilddogGeo with your data
+### Integrating WildGeo with your data
 
-WilddogGeo is designed as a lightweight add-on to Wilddog. However, to keep things
-simple, WilddogGeo stores data in its own format and its own location within
+WildGeo is designed as a lightweight add-on to Wilddog. However, to keep things
+simple, WildGeo stores data in its own format and its own location within
 your Wilddog database. This allows your existing data format and security rules to
-remain unchanged and for you to add WilddogGeo as an easy solution for geo queries
+remain unchanged and for you to add WildGeo as an easy solution for geo queries
 without modifying your existing data.
 
 ### Example Usage
 Assume you are building an app to rate bars and you store all information for a
 bar, e.g. name, business hours and price range, at `/bars/<bar-id>`. Later, you
 want to add the possibility for users to search for bars in their vicinity. This
-is where WilddogGeo comes in. You can store the location for each bar using
-WilddogGeo, using the bar IDs as WilddogGeo keys. WilddogGeo then allows you to easily
+is where WildGeo comes in. You can store the location for each bar using
+WildGeo, using the bar IDs as WildGeo keys. WildGeo then allows you to easily
 query which bar IDs (the keys) are nearby. To display any additional information
 about the bars, you can load the information for each bar returned by the query
 at `/bars/<bar-id>`.
@@ -35,46 +35,46 @@ at `/bars/<bar-id>`.
 
 
 
-## Downloading WilddogGeo for iOS
+## Downloading WildGeo for iOS
 
-In order to use WilddogGeo in your project, you need to download the framework and
+In order to use WildGeo in your project, you need to download the framework and
 add it to your project. You also need to [add the Wilddog
 framework](https://z.wilddog.com/ios/quickstart)
 and the CoreLocation framework to your project.
 
-You can include the WilddogGeo
+You can include the WildGeo
 Xcode project from this repo in your project.
 
 
 
 ## Getting Started with Wilddog
 
-WilddogGeo requires Wilddog in order to store location data. You can [sign up here for a free
+WildGeo requires Wilddog in order to store location data. You can [sign up here for a free
 account](https://www.wilddog.com/account/login).
 
 
-### WilddogGeo
+### WildGeo
 
-A `WilddogGeo` object is used to read and write geo location data to your Wilddog database
-and to create queries. To create a new `WilddogGeo` instance you need to attach it to a Wilddog database reference:
+A `WildGeo` object is used to read and write geo location data to your Wilddog database
+and to create queries. To create a new `WildGeo` instance you need to attach it to a Wilddog database reference:
 
 ##### Objective-C
 
 	Wilddog *geoRef = [[Wilddog alloc] 	initWithUrl:@"https://<your-Wilddog>.wildddogio.com/"];
-	WilddogGeo *geo = [[WilddogGeo alloc] initWithWilddogRef:geoRef];
+	WildGeo *geo = [[WildGeo alloc] initWithWilddogRef:geoRef];
 
 
 ##### Swift
 
 	let geoRef = Wilddog(url: "https://<your-wilddog>.wilddogio.com/")
-	let geo = WilddogGeo(geoRef: geoRef)
+	let geo = WildGeo(geoRef: geoRef)
 
 
 Note that you can point your reference to anywhere in your Wilddog database.
 
 #### Setting location data
 
-In WilddogGeo you can set and query locations by string keys. To set a location for a key
+In WildGeo you can set and query locations by string keys. To set a location for a key
 simply call the `setLocation:forKey` method:
 
 ##### Objective-C
@@ -130,7 +130,7 @@ geo.removeKey("wilddog-hq")
 #### Retrieving a location
 
 Retrieving locations happens with callbacks. If the key is not present in
-WilddogGeo, the callback will be called with `nil`. If an error occurred, the
+WildGeo, the callback will be called with `nil`. If an error occurred, the
 callback is passed the error and the location will be `nil`.
 
 ##### Objective-C
@@ -143,7 +143,7 @@ callback is passed the error and the location will be `nil`.
               location.coordinate.latitude,
               location.coordinate.longitude);
     } else {
-        NSLog(@"WilddogGeo does not contain a location for \"wilddog-hq\"");
+        NSLog(@"WildGeo does not contain a location for \"wilddog-hq\"");
     }
 }];
 ```
@@ -156,14 +156,14 @@ geo.getLocationForKey("wilddog-hq", withCallback: { (location, error) in
   } else if (location != nil) {
     println("Location for \"wilddog-hq\" is [\(location.coordinate.latitude), \(location.coordinate.longitude)]")
   } else {
-    println("WilddogGeo does not contain a location for \"wilddog-hq\"")
+    println("WildGeo does not contain a location for \"wilddog-hq\"")
   }
 })
 ````
 
 ### Geo Queries
 
-WilddogGeo allows you to query all keys within a geographic area using `GFQuery`
+WildGeo allows you to query all keys within a geographic area using `GFQuery`
 objects. As the locations for keys change, the query is updated in realtime and fires events
 letting you know if any relevant keys have moved. `GFQuery` parameters can be updated
 later to change the size and center of the queried area.
@@ -262,11 +262,11 @@ events might occur independently.
 
 ## 注册 Wilddog
 
-WilddogGeo 需要 Wilddog 来同步和存储数据。您可以在这里[注册](https://www.wilddog.com/my-account/signup)一个免费帐户。
+WildGeo 需要 Wilddog 来同步和存储数据。您可以在这里[注册](https://www.wilddog.com/my-account/signup)一个免费帐户。
 
 
 ## 支持
-如果在使用过程中有任何问题，请提 [issue](https://github.com/WildDogTeam/lib-ios-wilddoggeo/issues) ，我会在 Github 上给予帮助。
+如果在使用过程中有任何问题，请提 [issue](https://github.com/WildDogTeam/lib-ios-wildgeo/issues) ，我会在 Github 上给予帮助。
 
 ## 相关文档
 
@@ -283,7 +283,7 @@ WilddogGeo 需要 Wilddog 来同步和存储数据。您可以在这里[注册](
 
 ## 感谢 Thanks
 
-demo-ios-wilddoggeo is built on and with the aid of several  projects. We would like to thank the following projects for helping us achieve our goals:
+demo-ios-wildgeo is built on and with the aid of several  projects. We would like to thank the following projects for helping us achieve our goals:
 
 Open Source:
 

@@ -1,5 +1,5 @@
 /*
- * wilddog WilddogGeo iOS Library
+ * wilddog WildGeo iOS Library
  *
  * Copyright © 2014 wilddog - All Rights Reserved
  * https://www.wilddog.com
@@ -31,7 +31,7 @@
 
 typedef NSUInteger wilddogHandle;
 
-@class WilddogGeo;
+@class WildGeo;
 
 typedef enum {
     GFEventTypeKeyEntered,
@@ -48,9 +48,9 @@ typedef void (^GFReadyBlock) ();
 @interface GWQuery : NSObject
 
 /**
- * The WilddogGeo this GWQuery object uses.
+ * The WildGeo this GWQuery object uses.
  */
-@property (nonatomic, strong, readonly) WilddogGeo *geoFire;
+@property (nonatomic, strong, readonly) WildGeo *geoFire;
 
 /*!
  Adds an observer for an event type.
@@ -77,7 +77,7 @@ typedef void (^GFReadyBlock) ();
 - (wilddogHandle)observeEventType:(GFEventType)eventType withBlock:(GWQueryResultBlock)block;
 
 /**
- * Adds an observer that is called once all initial WilddogGeo data has been loaded and the relevant events have
+ * Adds an observer that is called once all initial WildGeo data has been loaded and the relevant events have
  * been fired for this query. Every time the query criteria is updated, this observer will be called after the
  * updated query has fired the appropriate key entered or key exited events.
  *

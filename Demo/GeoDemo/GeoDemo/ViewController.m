@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
-#import "WilddogGeo.h"
+#import "WildGeo.h"
 #import <Wilddog/Wilddog.h>
 
 
@@ -27,7 +27,7 @@
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
-@property (nonatomic, strong) WilddogGeo *geoWilddog;
+@property (nonatomic, strong) WildGeo *geoWilddog;
 @property (nonatomic, strong) GWRegionQuery *regionQuery;
 @property (nonatomic, strong) GWCircleQuery *circleQuery;
 @property (nonatomic, strong) UIView *circleView;
@@ -48,7 +48,7 @@
 {
     self = [super initWithCoder:coder];
     if (self != nil) {
-        self.geoWilddog = [[WilddogGeo alloc] initWithWilddogRef:[[Wilddog alloc] initWithUrl:GEO_WILD_URL]];
+        self.geoWilddog = [[WildGeo alloc] initWithWilddogRef:[[Wilddog alloc] initWithUrl:GEO_WILD_URL]];
         self.vehicleAnnotations = [NSMutableDictionary dictionary];
         self.centerAnnotation = [[aninotation alloc] init];
     }

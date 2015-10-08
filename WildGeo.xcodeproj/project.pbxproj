@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA13AF451BC6A3C3004E6EBF /* GWCircleQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA13AF461BC6A3C3004E6EBF /* GWQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF371BC6A3C3004E6EBF /* GWQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA13AF471BC6A3C3004E6EBF /* GWRegionQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA13AF491BC6A3C3004E6EBF /* GWBase32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3B1BC6A3C3004E6EBF /* GWBase32Utils.h */; settings = {ASSET_TAGS = (); }; };
+		EA13AF4A1BC6A3C3004E6EBF /* GWBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF3C1BC6A3C3004E6EBF /* GWBase32Utils.m */; settings = {ASSET_TAGS = (); }; };
+		EA13AF4B1BC6A3C3004E6EBF /* GWGeoHash.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3D1BC6A3C3004E6EBF /* GWGeoHash.h */; settings = {ASSET_TAGS = (); }; };
+		EA13AF4C1BC6A3C3004E6EBF /* GWGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF3E1BC6A3C3004E6EBF /* GWGeoHash.m */; settings = {ASSET_TAGS = (); }; };
+		EA13AF4D1BC6A3C3004E6EBF /* GWGeoHashQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3F1BC6A3C3004E6EBF /* GWGeoHashQuery.h */; settings = {ASSET_TAGS = (); }; };
+		EA13AF4E1BC6A3C3004E6EBF /* GWGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF401BC6A3C3004E6EBF /* GWGeoHashQuery.m */; settings = {ASSET_TAGS = (); }; };
+		EA13AF4F1BC6A3C3004E6EBF /* GWQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF411BC6A3C3004E6EBF /* GWQuery+Private.h */; settings = {ASSET_TAGS = (); }; };
+		EA13AF501BC6A3C3004E6EBF /* GWQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF421BC6A3C3004E6EBF /* GWQuery.m */; settings = {ASSET_TAGS = (); }; };
+		EA13AF571BC6A4FB004E6EBF /* WildGeo.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF561BC6A4FB004E6EBF /* WildGeo.h */; settings = {ASSET_TAGS = (); }; };
+		EA13AF5A1BC6A505004E6EBF /* WildGeo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF581BC6A505004E6EBF /* WildGeo.m */; settings = {ASSET_TAGS = (); }; };
+		EA13AF5B1BC6A505004E6EBF /* WildGeo+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF591BC6A505004E6EBF /* WildGeo+Private.h */; settings = {ASSET_TAGS = (); }; };
 		EA74CABA1BC6886900ECC4D5 /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA74CAB91BC6886900ECC4D5 /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
-		EA77F9C51BC6641C009A70EA /* WilddogGeo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77F9921BC6632B009A70EA /* WilddogGeo.m */; settings = {ASSET_TAGS = (); }; };
-		EA77F9C61BC6641C009A70EA /* GWBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77F9941BC6632B009A70EA /* GWBase32Utils.m */; settings = {ASSET_TAGS = (); }; };
-		EA77F9C71BC6641C009A70EA /* GWGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77F9961BC6632B009A70EA /* GWGeoHash.m */; settings = {ASSET_TAGS = (); }; };
-		EA77F9C81BC6641C009A70EA /* GWGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77F9981BC6632B009A70EA /* GWGeoHashQuery.m */; settings = {ASSET_TAGS = (); }; };
-		EA77F9C91BC6641C009A70EA /* GWQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA77F99A1BC6632B009A70EA /* GWQuery.m */; settings = {ASSET_TAGS = (); }; };
-		EA77F9D31BC6683B009A70EA /* WilddogGeo.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F98C1BC6632B009A70EA /* WilddogGeo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA77F9D41BC6683C009A70EA /* GWCircleQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F98D1BC6632B009A70EA /* GWCircleQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA77F9D51BC6683E009A70EA /* GWQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F98E1BC6632B009A70EA /* GWQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA77F9D61BC66841009A70EA /* GWRegionQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F98F1BC6632B009A70EA /* GWRegionQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA77F9DA1BC66A6B009A70EA /* GWBase32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F9931BC6632B009A70EA /* GWBase32Utils.h */; settings = {ASSET_TAGS = (); }; };
-		EA77F9DB1BC66A6E009A70EA /* WilddogGeo+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F9911BC6632B009A70EA /* WilddogGeo+Private.h */; settings = {ASSET_TAGS = (); }; };
-		EA77F9DC1BC66A72009A70EA /* GWGeoHash.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F9951BC6632B009A70EA /* GWGeoHash.h */; settings = {ASSET_TAGS = (); }; };
-		EA77F9DD1BC66A76009A70EA /* GWGeoHashQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F9971BC6632B009A70EA /* GWGeoHashQuery.h */; settings = {ASSET_TAGS = (); }; };
-		EA77F9DE1BC66A78009A70EA /* GWQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA77F9991BC6632B009A70EA /* GWQuery+Private.h */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,22 +37,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWCircleQuery.h; sourceTree = "<group>"; };
+		EA13AF371BC6A3C3004E6EBF /* GWQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWQuery.h; sourceTree = "<group>"; };
+		EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWRegionQuery.h; sourceTree = "<group>"; };
+		EA13AF3B1BC6A3C3004E6EBF /* GWBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWBase32Utils.h; sourceTree = "<group>"; };
+		EA13AF3C1BC6A3C3004E6EBF /* GWBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWBase32Utils.m; sourceTree = "<group>"; };
+		EA13AF3D1BC6A3C3004E6EBF /* GWGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGeoHash.h; sourceTree = "<group>"; };
+		EA13AF3E1BC6A3C3004E6EBF /* GWGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGeoHash.m; sourceTree = "<group>"; };
+		EA13AF3F1BC6A3C3004E6EBF /* GWGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGeoHashQuery.h; sourceTree = "<group>"; };
+		EA13AF401BC6A3C3004E6EBF /* GWGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGeoHashQuery.m; sourceTree = "<group>"; };
+		EA13AF411BC6A3C3004E6EBF /* GWQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GWQuery+Private.h"; sourceTree = "<group>"; };
+		EA13AF421BC6A3C3004E6EBF /* GWQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWQuery.m; sourceTree = "<group>"; };
+		EA13AF561BC6A4FB004E6EBF /* WildGeo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildGeo.h; sourceTree = "<group>"; };
+		EA13AF581BC6A505004E6EBF /* WildGeo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildGeo.m; sourceTree = "<group>"; };
+		EA13AF591BC6A505004E6EBF /* WildGeo+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WildGeo+Private.h"; sourceTree = "<group>"; };
 		EA74CAB91BC6886900ECC4D5 /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wilddog.framework; sourceTree = "<group>"; };
-		EA77F98C1BC6632B009A70EA /* WilddogGeo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WilddogGeo.h; sourceTree = "<group>"; };
-		EA77F98D1BC6632B009A70EA /* GWCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWCircleQuery.h; sourceTree = "<group>"; };
-		EA77F98E1BC6632B009A70EA /* GWQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWQuery.h; sourceTree = "<group>"; };
-		EA77F98F1BC6632B009A70EA /* GWRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWRegionQuery.h; sourceTree = "<group>"; };
-		EA77F9911BC6632B009A70EA /* WilddogGeo+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WilddogGeo+Private.h"; sourceTree = "<group>"; };
-		EA77F9921BC6632B009A70EA /* WilddogGeo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WilddogGeo.m; sourceTree = "<group>"; };
-		EA77F9931BC6632B009A70EA /* GWBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWBase32Utils.h; sourceTree = "<group>"; };
-		EA77F9941BC6632B009A70EA /* GWBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWBase32Utils.m; sourceTree = "<group>"; };
-		EA77F9951BC6632B009A70EA /* GWGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGeoHash.h; sourceTree = "<group>"; };
-		EA77F9961BC6632B009A70EA /* GWGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGeoHash.m; sourceTree = "<group>"; };
-		EA77F9971BC6632B009A70EA /* GWGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWGeoHashQuery.h; sourceTree = "<group>"; };
-		EA77F9981BC6632B009A70EA /* GWGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWGeoHashQuery.m; sourceTree = "<group>"; };
-		EA77F9991BC6632B009A70EA /* GWQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GWQuery+Private.h"; sourceTree = "<group>"; };
-		EA77F99A1BC6632B009A70EA /* GWQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWQuery.m; sourceTree = "<group>"; };
-		EA77F9BC1BC6638B009A70EA /* libWilddogGeo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWilddogGeo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA77F9BC1BC6638B009A70EA /* libWildGeo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWildGeo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +67,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA13AF341BC6A3C3004E6EBF /* WildGeo */ = {
+			isa = PBXGroup;
+			children = (
+				EA13AF351BC6A3C3004E6EBF /* API */,
+				EA13AF3A1BC6A3C3004E6EBF /* Implementation */,
+			);
+			path = WildGeo;
+			sourceTree = "<group>";
+		};
+		EA13AF351BC6A3C3004E6EBF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EA13AF561BC6A4FB004E6EBF /* WildGeo.h */,
+				EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */,
+				EA13AF371BC6A3C3004E6EBF /* GWQuery.h */,
+				EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EA13AF3A1BC6A3C3004E6EBF /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				EA13AF581BC6A505004E6EBF /* WildGeo.m */,
+				EA13AF591BC6A505004E6EBF /* WildGeo+Private.h */,
+				EA13AF3B1BC6A3C3004E6EBF /* GWBase32Utils.h */,
+				EA13AF3C1BC6A3C3004E6EBF /* GWBase32Utils.m */,
+				EA13AF3D1BC6A3C3004E6EBF /* GWGeoHash.h */,
+				EA13AF3E1BC6A3C3004E6EBF /* GWGeoHash.m */,
+				EA13AF3F1BC6A3C3004E6EBF /* GWGeoHashQuery.h */,
+				EA13AF401BC6A3C3004E6EBF /* GWGeoHashQuery.m */,
+				EA13AF411BC6A3C3004E6EBF /* GWQuery+Private.h */,
+				EA13AF421BC6A3C3004E6EBF /* GWQuery.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 		EA2E640B1BB5321C006E3918 = {
 			isa = PBXGroup;
 			children = (
+				EA13AF341BC6A3C3004E6EBF /* WildGeo */,
 				EA74CAB91BC6886900ECC4D5 /* Wilddog.framework */,
-				EA77F98A1BC6632B009A70EA /* WilddogGeo */,
 				EA2E64151BB5321C006E3918 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,46 +116,9 @@
 		EA2E64151BB5321C006E3918 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA77F9BC1BC6638B009A70EA /* libWilddogGeo.a */,
+				EA77F9BC1BC6638B009A70EA /* libWildGeo.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		EA77F98A1BC6632B009A70EA /* WilddogGeo */ = {
-			isa = PBXGroup;
-			children = (
-				EA77F98B1BC6632B009A70EA /* API */,
-				EA77F9901BC6632B009A70EA /* Implementation */,
-			);
-			path = WilddogGeo;
-			sourceTree = "<group>";
-		};
-		EA77F98B1BC6632B009A70EA /* API */ = {
-			isa = PBXGroup;
-			children = (
-				EA77F98C1BC6632B009A70EA /* WilddogGeo.h */,
-				EA77F98D1BC6632B009A70EA /* GWCircleQuery.h */,
-				EA77F98E1BC6632B009A70EA /* GWQuery.h */,
-				EA77F98F1BC6632B009A70EA /* GWRegionQuery.h */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		EA77F9901BC6632B009A70EA /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				EA77F9911BC6632B009A70EA /* WilddogGeo+Private.h */,
-				EA77F9921BC6632B009A70EA /* WilddogGeo.m */,
-				EA77F9931BC6632B009A70EA /* GWBase32Utils.h */,
-				EA77F9941BC6632B009A70EA /* GWBase32Utils.m */,
-				EA77F9951BC6632B009A70EA /* GWGeoHash.h */,
-				EA77F9961BC6632B009A70EA /* GWGeoHash.m */,
-				EA77F9971BC6632B009A70EA /* GWGeoHashQuery.h */,
-				EA77F9981BC6632B009A70EA /* GWGeoHashQuery.m */,
-				EA77F9991BC6632B009A70EA /* GWQuery+Private.h */,
-				EA77F99A1BC6632B009A70EA /* GWQuery.m */,
-			);
-			path = Implementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,24 +128,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA77F9DA1BC66A6B009A70EA /* GWBase32Utils.h in Headers */,
-				EA77F9DD1BC66A76009A70EA /* GWGeoHashQuery.h in Headers */,
-				EA77F9D31BC6683B009A70EA /* WilddogGeo.h in Headers */,
-				EA77F9D41BC6683C009A70EA /* GWCircleQuery.h in Headers */,
-				EA77F9DB1BC66A6E009A70EA /* WilddogGeo+Private.h in Headers */,
-				EA77F9D61BC66841009A70EA /* GWRegionQuery.h in Headers */,
-				EA77F9D51BC6683E009A70EA /* GWQuery.h in Headers */,
-				EA77F9DC1BC66A72009A70EA /* GWGeoHash.h in Headers */,
-				EA77F9DE1BC66A78009A70EA /* GWQuery+Private.h in Headers */,
+				EA13AF571BC6A4FB004E6EBF /* WildGeo.h in Headers */,
+				EA13AF5B1BC6A505004E6EBF /* WildGeo+Private.h in Headers */,
+				EA13AF451BC6A3C3004E6EBF /* GWCircleQuery.h in Headers */,
+				EA13AF471BC6A3C3004E6EBF /* GWRegionQuery.h in Headers */,
+				EA13AF461BC6A3C3004E6EBF /* GWQuery.h in Headers */,
+				EA13AF491BC6A3C3004E6EBF /* GWBase32Utils.h in Headers */,
+				EA13AF4F1BC6A3C3004E6EBF /* GWQuery+Private.h in Headers */,
+				EA13AF4D1BC6A3C3004E6EBF /* GWGeoHashQuery.h in Headers */,
+				EA13AF4B1BC6A3C3004E6EBF /* GWGeoHash.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EA77F9BB1BC6638B009A70EA /* WilddogGeo */ = {
+		EA77F9BB1BC6638B009A70EA /* WildGeo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA77F9C21BC6638B009A70EA /* Build configuration list for PBXNativeTarget "WilddogGeo" */;
+			buildConfigurationList = EA77F9C21BC6638B009A70EA /* Build configuration list for PBXNativeTarget "WildGeo" */;
 			buildPhases = (
 				EA77F9B81BC6638B009A70EA /* Sources */,
 				EA77F9B91BC6638B009A70EA /* Frameworks */,
@@ -157,9 +157,9 @@
 			);
 			dependencies = (
 			);
-			name = WilddogGeo;
-			productName = WilddogGeo;
-			productReference = EA77F9BC1BC6638B009A70EA /* libWilddogGeo.a */;
+			name = WildGeo;
+			productName = WildGeo;
+			productReference = EA77F9BC1BC6638B009A70EA /* libWildGeo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EA2E640F1BB5321C006E3918 /* Build configuration list for PBXProject "WilddogGeo" */;
+			buildConfigurationList = EA2E640F1BB5321C006E3918 /* Build configuration list for PBXProject "WildGeo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -188,7 +188,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA77F9BB1BC6638B009A70EA /* WilddogGeo */,
+				EA77F9BB1BC6638B009A70EA /* WildGeo */,
 			);
 		};
 /* End PBXProject section */
@@ -214,11 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA77F9C51BC6641C009A70EA /* WilddogGeo.m in Sources */,
-				EA77F9C61BC6641C009A70EA /* GWBase32Utils.m in Sources */,
-				EA77F9C91BC6641C009A70EA /* GWQuery.m in Sources */,
-				EA77F9C81BC6641C009A70EA /* GWGeoHashQuery.m in Sources */,
-				EA77F9C71BC6641C009A70EA /* GWGeoHash.m in Sources */,
+				EA13AF501BC6A3C3004E6EBF /* GWQuery.m in Sources */,
+				EA13AF4A1BC6A3C3004E6EBF /* GWBase32Utils.m in Sources */,
+				EA13AF4E1BC6A3C3004E6EBF /* GWGeoHashQuery.m in Sources */,
+				EA13AF4C1BC6A3C3004E6EBF /* GWGeoHash.m in Sources */,
+				EA13AF5A1BC6A505004E6EBF /* WildGeo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +310,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/WildGeo/API";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WildGeo;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -324,8 +325,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/WildGeo/API";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WildGeo;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -333,7 +335,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA2E640F1BB5321C006E3918 /* Build configuration list for PBXProject "WilddogGeo" */ = {
+		EA2E640F1BB5321C006E3918 /* Build configuration list for PBXProject "WildGeo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA2E641B1BB5321C006E3918 /* Debug */,
@@ -342,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA77F9C21BC6638B009A70EA /* Build configuration list for PBXNativeTarget "WilddogGeo" */ = {
+		EA77F9C21BC6638B009A70EA /* Build configuration list for PBXNativeTarget "WildGeo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA77F9C31BC6638B009A70EA /* Debug */,

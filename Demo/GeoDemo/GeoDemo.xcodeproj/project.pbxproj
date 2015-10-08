@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA13AF551BC6A40B004E6EBF /* libWildGeo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA13AF141BC6A375004E6EBF /* libWildGeo.a */; };
 		EA2E64711BB53EFA006E3918 /* GeoDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2E64701BB53EFA006E3918 /* GeoDemoTests.m */; };
 		EA2E647C1BB53EFA006E3918 /* GeoDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2E647B1BB53EFA006E3918 /* GeoDemoUITests.m */; };
 		EA2E64921BB540D2006E3918 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2E64911BB540D2006E3918 /* MapKit.framework */; };
@@ -20,11 +21,24 @@
 		EA4CF1791BC68C07002F6735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF16F1BC68C07002F6735 /* main.m */; settings = {ASSET_TAGS = (); }; };
 		EA4CF17A1BC68C07002F6735 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1711BC68C07002F6735 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		EA4CF17B1BC68C07002F6735 /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4CF1721BC68C07002F6735 /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
-		EA77F9E41BC686AA009A70EA /* libWilddogGeo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77F9D11BC66693009A70EA /* libWilddogGeo.a */; };
 		EA77F9E61BC68782009A70EA /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77F9E51BC68782009A70EA /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA13AF131BC6A375004E6EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA13AF0F1BC6A375004E6EBF /* WildGeo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA77F9BC1BC6638B009A70EA;
+			remoteInfo = WildGeo;
+		};
+		EA13AF531BC6A403004E6EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA13AF0F1BC6A375004E6EBF /* WildGeo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA77F9BB1BC6638B009A70EA;
+			remoteInfo = WildGeo;
+		};
 		EA2E646D1BB53EFA006E3918 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA2E644B1BB53EFA006E3918 /* Project object */;
@@ -39,23 +53,10 @@
 			remoteGlobalIDString = EA2E64521BB53EFA006E3918;
 			remoteInfo = GeoDemo;
 		};
-		EA77F9D01BC66693009A70EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EA77F9BC1BC6638B009A70EA;
-			remoteInfo = WilddogGeo;
-		};
-		EA77F9E11BC6869C009A70EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = EA77F9BB1BC6638B009A70EA;
-			remoteInfo = WilddogGeo;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA13AF0F1BC6A375004E6EBF /* WildGeo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WildGeo.xcodeproj; path = ../../WildGeo.xcodeproj; sourceTree = "<group>"; };
 		EA2E64531BB53EFA006E3918 /* GeoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2E646C1BB53EFA006E3918 /* GeoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2E64701BB53EFA006E3918 /* GeoDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoDemoTests.m; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		EA4CF1701BC68C07002F6735 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EA4CF1711BC68C07002F6735 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EA4CF1721BC68C07002F6735 /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wilddog.framework; sourceTree = "<group>"; };
-		EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WilddogGeo.xcodeproj; path = ../../WilddogGeo.xcodeproj; sourceTree = "<group>"; };
 		EA77F9E51BC68782009A70EA /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wilddog.framework; path = GeoDemo/Wilddog.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA77F9E41BC686AA009A70EA /* libWilddogGeo.a in Frameworks */,
+				EA13AF551BC6A40B004E6EBF /* libWildGeo.a in Frameworks */,
 				EA4CF17B1BC68C07002F6735 /* Wilddog.framework in Frameworks */,
 				EA2E64991BB54611006E3918 /* JavaScriptCore.framework in Frameworks */,
 				EA2E64921BB540D2006E3918 /* MapKit.framework in Frameworks */,
@@ -111,12 +111,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA13AF101BC6A375004E6EBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA13AF141BC6A375004E6EBF /* libWildGeo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EA2E644A1BB53EFA006E3918 = {
 			isa = PBXGroup;
 			children = (
+				EA13AF0F1BC6A375004E6EBF /* WildGeo.xcodeproj */,
 				EA4CF1641BC68C07002F6735 /* GeoDemo */,
 				EA77F9E51BC68782009A70EA /* Wilddog.framework */,
-				EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */,
 				EA2E64981BB54611006E3918 /* JavaScriptCore.framework */,
 				EA2E64911BB540D2006E3918 /* MapKit.framework */,
 				EA2E646F1BB53EFA006E3918 /* GeoDemoTests */,
@@ -172,14 +180,6 @@
 			path = GeoDemo;
 			sourceTree = "<group>";
 		};
-		EA77F9CD1BC66693009A70EA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA77F9D11BC66693009A70EA /* libWilddogGeo.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -194,7 +194,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				EA77F9E21BC6869C009A70EA /* PBXTargetDependency */,
+				EA13AF541BC6A403004E6EBF /* PBXTargetDependency */,
 			);
 			name = GeoDemo;
 			productName = GeoDemo;
@@ -272,8 +272,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EA77F9CD1BC66693009A70EA /* Products */;
-					ProjectRef = EA77F9CC1BC66693009A70EA /* WilddogGeo.xcodeproj */;
+					ProductGroup = EA13AF101BC6A375004E6EBF /* Products */;
+					ProjectRef = EA13AF0F1BC6A375004E6EBF /* WildGeo.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -286,11 +286,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EA77F9D11BC66693009A70EA /* libWilddogGeo.a */ = {
+		EA13AF141BC6A375004E6EBF /* libWildGeo.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libWilddogGeo.a;
-			remoteRef = EA77F9D01BC66693009A70EA /* PBXContainerItemProxy */;
+			path = libWildGeo.a;
+			remoteRef = EA13AF131BC6A375004E6EBF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -354,6 +354,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA13AF541BC6A403004E6EBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WildGeo;
+			targetProxy = EA13AF531BC6A403004E6EBF /* PBXContainerItemProxy */;
+		};
 		EA2E646E1BB53EFA006E3918 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA2E64521BB53EFA006E3918 /* GeoDemo */;
@@ -363,11 +368,6 @@
 			isa = PBXTargetDependency;
 			target = EA2E64521BB53EFA006E3918 /* GeoDemo */;
 			targetProxy = EA2E64781BB53EFA006E3918 /* PBXContainerItemProxy */;
-		};
-		EA77F9E21BC6869C009A70EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WilddogGeo;
-			targetProxy = EA77F9E11BC6869C009A70EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -481,7 +481,7 @@
 					"$(PROJECT_DIR)/GeoDemo",
 				);
 				HEADER_SEARCH_PATHS = (
-					"${PROJECT_DIR}/../../WilddogGeo/API",
+					"${PROJECT_DIR}/../../WildGeo/API",
 					"${PROJECT_DIR}/GeoDemo",
 				);
 				INFOPLIST_FILE = GeoDemo/Info.plist;
@@ -503,7 +503,7 @@
 					"$(PROJECT_DIR)/GeoDemo",
 				);
 				HEADER_SEARCH_PATHS = (
-					"${PROJECT_DIR}/../../WilddogGeo/API",
+					"${PROJECT_DIR}/../../WildGeo/API",
 					"${PROJECT_DIR}/GeoDemo",
 				);
 				INFOPLIST_FILE = GeoDemo/Info.plist;

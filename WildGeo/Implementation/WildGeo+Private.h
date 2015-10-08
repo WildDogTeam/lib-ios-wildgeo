@@ -1,15 +1,15 @@
 //
-//  WilddogGeo+Private.h
-//  WilddogGeo
+//  WildGeo+Private.h
+//  WildGeo
 //
 //  Created by Jonny Dimond on 7/7/14.
 //  Copyright (c) 2014 wilddog. All rights reserved.
 //
 
-#import "WilddogGeo.h"
+#import "WildGeo.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface WilddogGeo (Private)
+@interface WildGeo (Private)
 
 - (Wilddog *)wilddogRefForLocationKey:(NSString *)key;
 

@@ -1,30 +1,30 @@
 //
-//  WilddogGeo.m
-//  WilddogGeo
+//  WildGeo.m
+//  WildGeo
 //
 //  Created by Jonny Dimond on 7/3/14.
 //  Copyright (c) 2014 wilddog. All rights reserved.
 //
 
-#import "WilddogGeo.h"
-#import "WilddogGeo+Private.h"
+#import "WildGeo.h"
+#import "WildGeo+Private.h"
 #import "GWGeoHash.h"
 #import "GWQuery+Private.h"
 #import <Wilddog/Wilddog.h>
 
-NSString * const kWilddogGeoErrorDomain = @"com.wilddog.geowild";
+NSString * const kWildGeoErrorDomain = @"com.wilddog.geowild";
 
 enum {
     GFParseError = 1000
 };
 
-@interface WilddogGeo ()
+@interface WildGeo ()
 
 @property (nonatomic, strong, readwrite) Wilddog *wilddogRef;
 
 @end
 
-@implementation WilddogGeo
+@implementation WildGeo
 
 - (id)init
 {
@@ -75,7 +75,7 @@ withCompletionBlock:(GFCompletionBlock)block
     });
     if ([key rangeOfCharacterFromSet:illegalCharacters].location != NSNotFound) {
         [NSException raise:NSInvalidArgumentException
-                    format:@"Not a valid WilddogGeo key: \"%@\". Characters .#$][/ not allowed in key!", key];
+                    format:@"Not a valid WildGeo key: \"%@\". Characters .#$][/ not allowed in key!", key];
     }
     return [self.wilddogRef childByAppendingPath:key];
 }
@@ -146,14 +146,14 @@ withCompletionBlock:(GFCompletionBlock)block
              if (snapshot.value == nil || [snapshot.value isMemberOfClass:[NSNull class]]) {
                  callback(nil, nil);
              } else {
-                 CLLocation *location = [WilddogGeo locationFromValue:snapshot.value];
+                 CLLocation *location = [WildGeo locationFromValue:snapshot.value];
                  if (location != nil) {
                      callback(location, nil);
                  } else {
                      NSMutableDictionary* details = [NSMutableDictionary dictionary];
                      [details setValue:[NSString stringWithFormat:@"Unable to parse location value: %@", snapshot.value]
                                 forKey:NSLocalizedDescriptionKey];
-                     NSError *error = [NSError errorWithDomain:kWilddogGeoErrorDomain code:GFParseError userInfo:details];
+                     NSError *error = [NSError errorWithDomain:kWildGeoErrorDomain code:GFParseError userInfo:details];
                      callback(nil, error);
                  }
              }
@@ -167,12 +167,12 @@ withCompletionBlock:(GFCompletionBlock)block
 
 - (GWCircleQuery *)queryAtLocation:(CLLocation *)location withRadius:(double)radius
 {
-    return [[GWCircleQuery alloc] initWithWilddogGeo:self location:location radius:radius];
+    return [[GWCircleQuery alloc] initWithWildGeo:self location:location radius:radius];
 }
 
 - (GWRegionQuery *)queryWithRegion:(MKCoordinateRegion)region
 {
-    return [[GWRegionQuery alloc] initWithWilddogGeo:self region:region];
+    return [[GWRegionQuery alloc] initWithWildGeo:self region:region];
 }
 
 @end
