@@ -10,18 +10,18 @@
 		EA13AF451BC6A3C3004E6EBF /* GWCircleQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA13AF461BC6A3C3004E6EBF /* GWQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF371BC6A3C3004E6EBF /* GWQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA13AF471BC6A3C3004E6EBF /* GWRegionQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA13AF491BC6A3C3004E6EBF /* GWBase32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3B1BC6A3C3004E6EBF /* GWBase32Utils.h */; settings = {ASSET_TAGS = (); }; };
-		EA13AF4A1BC6A3C3004E6EBF /* GWBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF3C1BC6A3C3004E6EBF /* GWBase32Utils.m */; settings = {ASSET_TAGS = (); }; };
-		EA13AF4B1BC6A3C3004E6EBF /* GWGeoHash.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3D1BC6A3C3004E6EBF /* GWGeoHash.h */; settings = {ASSET_TAGS = (); }; };
-		EA13AF4C1BC6A3C3004E6EBF /* GWGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF3E1BC6A3C3004E6EBF /* GWGeoHash.m */; settings = {ASSET_TAGS = (); }; };
-		EA13AF4D1BC6A3C3004E6EBF /* GWGeoHashQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3F1BC6A3C3004E6EBF /* GWGeoHashQuery.h */; settings = {ASSET_TAGS = (); }; };
-		EA13AF4E1BC6A3C3004E6EBF /* GWGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF401BC6A3C3004E6EBF /* GWGeoHashQuery.m */; settings = {ASSET_TAGS = (); }; };
-		EA13AF4F1BC6A3C3004E6EBF /* GWQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF411BC6A3C3004E6EBF /* GWQuery+Private.h */; settings = {ASSET_TAGS = (); }; };
-		EA13AF501BC6A3C3004E6EBF /* GWQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF421BC6A3C3004E6EBF /* GWQuery.m */; settings = {ASSET_TAGS = (); }; };
-		EA13AF571BC6A4FB004E6EBF /* WildGeo.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF561BC6A4FB004E6EBF /* WildGeo.h */; settings = {ASSET_TAGS = (); }; };
-		EA13AF5A1BC6A505004E6EBF /* WildGeo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF581BC6A505004E6EBF /* WildGeo.m */; settings = {ASSET_TAGS = (); }; };
-		EA13AF5B1BC6A505004E6EBF /* WildGeo+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF591BC6A505004E6EBF /* WildGeo+Private.h */; settings = {ASSET_TAGS = (); }; };
-		EA74CABA1BC6886900ECC4D5 /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA74CAB91BC6886900ECC4D5 /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
+		EA13AF491BC6A3C3004E6EBF /* GWBase32Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3B1BC6A3C3004E6EBF /* GWBase32Utils.h */; };
+		EA13AF4A1BC6A3C3004E6EBF /* GWBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF3C1BC6A3C3004E6EBF /* GWBase32Utils.m */; };
+		EA13AF4B1BC6A3C3004E6EBF /* GWGeoHash.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3D1BC6A3C3004E6EBF /* GWGeoHash.h */; };
+		EA13AF4C1BC6A3C3004E6EBF /* GWGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF3E1BC6A3C3004E6EBF /* GWGeoHash.m */; };
+		EA13AF4D1BC6A3C3004E6EBF /* GWGeoHashQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF3F1BC6A3C3004E6EBF /* GWGeoHashQuery.h */; };
+		EA13AF4E1BC6A3C3004E6EBF /* GWGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF401BC6A3C3004E6EBF /* GWGeoHashQuery.m */; };
+		EA13AF4F1BC6A3C3004E6EBF /* GWQuery+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF411BC6A3C3004E6EBF /* GWQuery+Private.h */; };
+		EA13AF501BC6A3C3004E6EBF /* GWQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF421BC6A3C3004E6EBF /* GWQuery.m */; };
+		EA13AF571BC6A4FB004E6EBF /* WildGeo.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF561BC6A4FB004E6EBF /* WildGeo.h */; };
+		EA13AF5A1BC6A505004E6EBF /* WildGeo.m in Sources */ = {isa = PBXBuildFile; fileRef = EA13AF581BC6A505004E6EBF /* WildGeo.m */; };
+		EA13AF5B1BC6A505004E6EBF /* WildGeo+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF591BC6A505004E6EBF /* WildGeo+Private.h */; };
+		EA6736D81C3AA0AC000C9D3E /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6736D71C3AA0AC000C9D3E /* Wilddog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,7 +51,7 @@
 		EA13AF561BC6A4FB004E6EBF /* WildGeo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildGeo.h; sourceTree = "<group>"; };
 		EA13AF581BC6A505004E6EBF /* WildGeo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildGeo.m; sourceTree = "<group>"; };
 		EA13AF591BC6A505004E6EBF /* WildGeo+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WildGeo+Private.h"; sourceTree = "<group>"; };
-		EA74CAB91BC6886900ECC4D5 /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wilddog.framework; sourceTree = "<group>"; };
+		EA6736D71C3AA0AC000C9D3E /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wilddog.framework; path = WildGeo/Wilddog.framework; sourceTree = "<group>"; };
 		EA77F9BC1BC6638B009A70EA /* libWildGeo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWildGeo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA74CABA1BC6886900ECC4D5 /* Wilddog.framework in Frameworks */,
+				EA6736D81C3AA0AC000C9D3E /* Wilddog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +107,8 @@
 		EA2E640B1BB5321C006E3918 = {
 			isa = PBXGroup;
 			children = (
+				EA6736D71C3AA0AC000C9D3E /* Wilddog.framework */,
 				EA13AF341BC6A3C3004E6EBF /* WildGeo */,
-				EA74CAB91BC6886900ECC4D5 /* Wilddog.framework */,
 				EA2E64151BB5321C006E3918 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -309,6 +309,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WildGeo",
 				);
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/WildGeo/API";
 				ONLY_ACTIVE_ARCH = YES;
@@ -324,6 +325,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/WildGeo",
 				);
 				HEADER_SEARCH_PATHS = "${PROJECT_DIR}/WildGeo/API";
 				OTHER_LDFLAGS = "-ObjC";
