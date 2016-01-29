@@ -50,7 +50,7 @@ Xcode project from this repo in your project.
 ## Getting Started with Wilddog
 
 WildGeo requires Wilddog in order to store location data. You can [sign up here for a free
-account](https://www.wilddog.com/account/login).
+account](https://www.wilddog.com/my-account/signup).
 
 
 ### WildGeo
