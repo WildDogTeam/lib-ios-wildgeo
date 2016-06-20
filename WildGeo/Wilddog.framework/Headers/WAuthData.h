@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
- *  auth 模型
+ *  Auth 模型
  */
 @interface WAuthData : NSObject
 
@@ -49,3 +51,5 @@
 @property (nonatomic, strong, readonly) NSDictionary *providerData;
 
 @end
+
+NS_ASSUME_NONNULL_END

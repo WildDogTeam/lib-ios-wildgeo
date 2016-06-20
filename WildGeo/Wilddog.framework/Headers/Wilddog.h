@@ -13,6 +13,9 @@
 #import "WConfig.h"
 #import "WTransactionResult.h"
 #import "WMutableData.h"
+#import "WAuthType.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *
@@ -20,11 +23,11 @@
 @interface Wilddog : WQuery
 
 
-/** @name 初始化一个Wilddog对象 */
+/** @name 初始化一个 Wilddog 对象 */
 
 
 /**
- *  初始化一个由url生成的对象。
+ *  初始化一个由 url 生成的对象。
  *
  *  @param url  URL(例如: https://<appId>.wilddogio.com/)
  *
@@ -57,7 +60,7 @@
 - (Wilddog *) childByAutoId;
 
 
-/** @name 写数据 */
+/** @name 数据操作 */
 
 
 /*!  往 Wilddog 当前路径写入一个值.
@@ -85,7 +88,7 @@
  
  
  */
-- (void)setValue:(id)value;
+- (void)setValue:(nullable id)value;
 
 
 #define kWilddogServerValueTimestamp @{ @".sv": @"timestamp" }
@@ -97,7 +100,7 @@
  *  @param block 写操作提交到 Wilddog 服务器后回调的 block
  *  @see setValue:
  */
-- (void) setValue:(id)value withCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) setValue:(nullable id)value withCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -110,7 +113,7 @@
  *
  * @see setValue:
  */
-- (void) setValue:(id)value andPriority:(id)priority;
+- (void) setValue:(nullable id)value andPriority:(nullable id)priority;
 
 
 /**
@@ -122,7 +125,7 @@
  *
  *  @see setValue:
  */
-- (void) setValue:(id)value andPriority:(id)priority withCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) setValue:(nullable id)value andPriority:(nullable id)priority withCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -138,7 +141,7 @@
  *
  *  @param block 删除操作提交到Wilddog服务器后，返回的block
  */
-- (void) removeValueWithCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) removeValueWithCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -157,7 +160,7 @@
  *
  *  @param priority  指定节点的优先级。
  */
-- (void) setPriority:(id)priority;
+- (void) setPriority:(nullable id)priority;
 
 
 /**
@@ -166,7 +169,7 @@
  * @param priority 指定节点的优先级
  * @param block 当priority操作被提交到Wilddog服务器之后，回调的block
  */
-- (void) setPriority:(id)priority withCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) setPriority:(nullable id)priority withCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -187,10 +190,10 @@
  *  @param values 包含要合并子节点的对象
  *  @param block updateChildValues 操作提交到 Wilddog 服务器后，返回的block
  */
-- (void) updateChildValues:(NSDictionary *)values withCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) updateChildValues:(NSDictionary *)values withCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
-/** @name 绑定观察者，读取数据 */
+/** @name 监听数据变化，读取数据 */
 
 
 /**
@@ -221,7 +224,7 @@
  * @param block 当监听到初始数据和初始数据发生变化时，这个block将被回调。block将传输一个WDataSnapshot类型的数据和前一个子节点的key
  * @return 一个WilddogHandle，用于调用函数 removeObserverWithHandle: 去注销这个block
  */
-- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block;
+- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable  prevKey))block;
 
 
 /**
@@ -235,7 +238,7 @@
  *
  *  @return 一个WilddogHandle，用于调用函数 removeObserverWithHandle: 去注销这个block
  */
-- (WilddogHandle) observeEventType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (WilddogHandle) observeEventType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 /**
@@ -252,7 +255,7 @@
  *
  * @return  一个WilddogHandle，用于调用函数 removeObserverWithHandle: 去注销这个block
  */
-- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable prevKey))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 /**
@@ -270,7 +273,7 @@
  * @param eventType 监听的事件类型
  * @param block block 当监听到初始数据和初始数据发生变化时，这个block将被回调。block将传输一个WDataSnapshot类型的数据和前一个子节点的key
  */
-- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block;
+- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable prevKey))block;
 
 
 /**
@@ -280,7 +283,7 @@
  *  @param block       当监听到某事件时，回调block
  *  @param cancelBlock 如果您没有权限访问此数据，将调用该cancelBlock
  */
-- (void) observeSingleEventOfType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (void) observeSingleEventOfType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 /**
@@ -292,11 +295,11 @@
  * @param block 将传输一个WDataSnapshot类型的数据和前一个子节点的key
  * @param 如果您没有权限访问此数据，将调用该cancelBlock
  */
-- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable prevKey))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 
-/** @name 移除观察者 */
+/** @name 移除数据监听 */
 
 
 /**
@@ -313,7 +316,7 @@
 - (void) removeAllObservers;
 
 
-/** @name 离线操作的含义是客户端的推送的数据并非立刻生效,而是当客户端离线的时候才生效 */
+/** @name 离线操作 */
 
 
 /**
@@ -325,7 +328,7 @@
  *
  * @param value 断开连接后要设置的值
  */
-- (void) onDisconnectSetValue:(id)value;
+- (void) onDisconnectSetValue:(nullable id)value;
 
 
 /**
@@ -336,7 +339,7 @@
  * @param value 断开连接后要设置的值
  * @param block 当设置值的操作成功排队到Wilddog服务器上，这个block就会被触发
  */
-- (void) onDisconnectSetValue:(id)value withCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) onDisconnectSetValue:(nullable id)value withCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -347,7 +350,7 @@
  * @param value 断开连接后要设置的值
  * @param priority 断开连接后要设置的优先级
  */
-- (void) onDisconnectSetValue:(id)value andPriority:(id)priority;
+- (void) onDisconnectSetValue:(nullable id)value andPriority:(id)priority;
 
 
 /**
@@ -359,7 +362,7 @@
  * @param priority 连接断开后要设置的优先级
  * @param block 当设置值的操作成功排队到Wilddog服务器上，这个block就会被触发
  */
-- (void) onDisconnectSetValue:(id)value andPriority:(id)priority withCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) onDisconnectSetValue:(nullable id)value andPriority:(nullable id)priority withCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -381,7 +384,7 @@
  *
  * @param block 当删除值的操作成功排队到Wilddog服务器上，这个block就会被触发
  */
-- (void) onDisconnectRemoveValueWithCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) onDisconnectRemoveValueWithCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -402,7 +405,7 @@
  * @param values 在连接断开之后，一个包含子节点键和值的字典
  * @param block 当更新值的操作成功排队到Wilddog服务器上，这个block就会被触发
  */
-- (void) onDisconnectUpdateChildValues:(NSDictionary *)values withCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) onDisconnectUpdateChildValues:(NSDictionary *)values withCompletionBlock:(void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /**
@@ -419,7 +422,7 @@
  *
  * @param block 当Wilddog服务器接受到cancel请求，触发的block
  */
-- (void) cancelDisconnectOperationsWithCompletionBlock:(void (^)(NSError* error, Wilddog* ref))block;
+- (void) cancelDisconnectOperationsWithCompletionBlock:(nullable void (^)(NSError *__nullable error, Wilddog* ref))block;
 
 
 /** @name 用户创建和管理 */
@@ -433,7 +436,7 @@
  *  @param password 密码
  *  @param block    创建账户操作完成回调的block
  */
-- (void) createUser:(NSString *)email password:(NSString *)password withCompletionBlock:(void (^)(NSError *error))block;
+- (void) createUser:(NSString *)email password:(NSString *)password withCompletionBlock:(void (^)(NSError *__nullable error))block;
 
 
 /**
@@ -443,7 +446,7 @@
  *  @param password 密码
  *  @param block    创建账户操作完成回调的block。若成功，则返回一个包含uid的字典
  */
-- (void)createUser:(NSString *)email password:(NSString *)password withValueCompletionBlock:(void (^) ( NSError *error , NSDictionary *result ))block;
+- (void)createUser:(NSString *)email password:(NSString *)password withValueCompletionBlock:(void (^) ( NSError *__nullable error , NSDictionary *result ))block;
 
 
 /**
@@ -454,7 +457,7 @@
  *  @param password 密码
  *  @param block    删除账号操作完成回调的block
  */
-- (void) removeUser:(NSString *)email password:(NSString *)password withCompletionBlock:(void (^)(NSError *error))block;
+- (void) removeUser:(NSString *)email password:(NSString *)password withCompletionBlock:(void (^)(NSError *__nullable error))block;
 
 
 /**
@@ -466,7 +469,7 @@
  *  @param newPassword 新密码
  *  @param block       修改密码操作完成回调的block
  */
-- (void) changePasswordForUser:(NSString *)email fromOld:(NSString *)oldPassword toNew:(NSString *)newPassword withCompletionBlock:(void (^)(NSError *error))block;
+- (void) changePasswordForUser:(NSString *)email fromOld:(NSString *)oldPassword toNew:(NSString *)newPassword withCompletionBlock:(void (^)(NSError *__nullable error))block;
 
 
 /**
@@ -478,7 +481,7 @@
  *  @param newEmail    新邮箱
  *  @param block       修改登录邮箱操作完成回调的block
  */
-- (void) changeEmailForUser:(NSString *)email password:(NSString *)password toNewEmail:(NSString *)newEmail withCompletionBlock:(void (^)(NSError *error))block;
+- (void) changeEmailForUser:(NSString *)email password:(NSString *)password toNewEmail:(NSString *)newEmail withCompletionBlock:(void (^)(NSError *__nullable error))block;
 
 
 /**
@@ -489,7 +492,7 @@
  *  @param email 邮箱
  *  @param block 操作成功后返回的block
  */
-- (void) resetPasswordForUser:(NSString *)email withCompletionBlock:(void (^)(NSError* error))block;
+- (void) resetPasswordForUser:(NSString *)email withCompletionBlock:(void (^)(NSError *__nullable error))block;
 
 
 /** @name 读取和监听认证信息 */
@@ -507,7 +510,7 @@
  *
  *  @return 一个WilddogHandle，用于调用函数 removeAuthEventObserverWithHandle: 去注销这个block
  */
-- (WilddogHandle) observeAuthEventWithBlock:(void (^)(WAuthData *authData))block;
+- (WilddogHandle) observeAuthEventWithBlock:(void (^)(WAuthData *__nullable authData))block;
 
 
 /**
@@ -527,7 +530,7 @@
  *
  *  @param block block回调这个认证登录的结果
  */
-- (void)authAnonymouslyWithCompletionBlock:(void ( ^ ) ( NSError *error , WAuthData *authData ))block;
+- (void)authAnonymouslyWithCompletionBlock:(void (^) (NSError *__nullable error , WAuthData *__nullable authData))block;
 
 
 /**
@@ -537,7 +540,7 @@
  *  @param password 密码
  *  @param block    操作成功后返回的block
  */
-- (void)authUser:(NSString *)email password:(NSString *)password withCompletionBlock:(void (^) ( NSError *error , WAuthData *authData ))block;
+- (void)authUser:(NSString *)email password:(NSString *)password withCompletionBlock:(void (^) (NSError *__nullable error , WAuthData *__nullable authData))block;
 
 
 /**
@@ -546,7 +549,7 @@
  *  @param token 可以是一个Wilddog 超级密钥，或由密钥生成的token
  *  @param block block回调这个认证登录的结果
  */
-- (void)authWithCustomToken:(NSString *)token withCompletionBlock:(void ( ^ ) ( NSError *error , WAuthData *authData ))block;
+- (void)authWithCustomToken:(NSString *)token withCompletionBlock:(void (^) (NSError *__nullable error , WAuthData *__nullable authData))block;
 
 
 /**
@@ -558,7 +561,7 @@
  *  @param oauthToken 用于第三方认证的OAuth token
  *  @param block block回调这个认证登录的结果
  */
-- (void)authWithOAuthProvider:(NSString *)provider token:(NSString *)oauthToken withCompletionBlock:(void ( ^ ) ( NSError *error , WAuthData *authData ))block;
+- (void)authWithOAuthProvider:(NSString *)provider token:(NSString *)oauthToken withCompletionBlock:(void (^) (NSError *__nullable error , WAuthData *__nullable authData))block;
 
 
 /**
@@ -571,7 +574,7 @@
  *  @param parameters 第三方登录返回的一些参数
  *  @param block      block回调这个认证登录的结果
  */
-- (void)authWithOAuthProvider:(NSString *)provider parameters:(NSDictionary *)parameters withCompletionBlock:(void ( ^ ) ( NSError *error , WAuthData *authData ))block;
+- (void)authWithOAuthProvider:(NSString *)provider parameters:(NSDictionary *)parameters withCompletionBlock:(void (^) (NSError *__nullable error , WAuthData *__nullable authData))block;
 
 
 /**
@@ -595,46 +598,70 @@
 + (void) goOnline;
 
 
-
+/** @name 事务 */
 
 /**
- * 执行并发事务
- *
- * 当操作到达服务器后，发现有新数据，块(block)将再次运行，来自服务器的最新数据。
- *
- * 当块(block)运行时，你的可能需要终止事务， 调用[FTransactionResult abort].
- *
- * @param block    块(block)接收的当前数据(currentData)，然后返回一个WTransactionResult对象。
+ 更新当前路径下的数据。服务器数据将会在 block 中返回，我们所要做的就是在 block 中
+ 把数据改成你要想要的，然后返回到 WTransactionResult 中。
+ 
+ 如果这个节点数据发送到服务器上时已经被其他人修改过，那么这个 block 将会获取服务器
+ 最新数据再次执行。
+ 
+ 调用 [FTransactionResult abort] 可以取消这次操作。
+ 事例：
+ 
+    Wilddog *ref = [[Wilddog alloc] initWithUrl:@"https://<your-appid>.wilddogio.com"];
+    [[ref childByAppendingPath:@"followNumber"] runTransactionBlock:^WTransactionResult *(WMutableData *currentData)  {
+    NSNumber *value = currentData.value;
+    if (currentData.value == nil) {
+        value = @1;
+    }else{
+        [currentData setValue:[NSNumber numberWithInt:(1 + [value intValue])]];
+    }
+    return [WTransactionResult successWithValue:currentData];
+ 
+    }];
+
+ 
+  @param block   块(block)接收的当前数据(currentData)，然后返回一个WTransactionResult对象。
  */
 
 - (void) runTransactionBlock:(WTransactionResult* (^) (WMutableData* currentData))block;
 
 
 /**
- * 执行并发事务
- *
- * 当操作到达服务器后，发现有新数据，块(block)将再次运行，来自服务器的最新数据。
- *
- * 当块(block)运行时，你的可能需要终止事务， 调用[FTransactionResult abort].
- *
- * @param block    块(block)接收的当前数据(currentData)，然后返回一个WTransactionResult对象。
- * @param completionBlock 当事务完成时这个块将被触发，无论成功与否。
+ 更新当前路径下的数据。服务器数据将会在 block 中返回，我们所要做的就是在 block 中
+ 把数据改成你要想要的，然后返回到 WTransactionResult 中。
+ 
+ 如果这个节点数据发送到服务器上时已经被其他人修改过，那么这个 block 将会获取服务器
+ 最新数据再次执行。
+ 
+ 调用 [FTransactionResult abort] 可以取消这次操作。 
+ 
+ @param block    块(block)接收的当前数据(currentData)，然后返回一个WTransactionResult对象。
+ 
+ @param completionBlock 当事务完成时这个块将被触发，无论成功与否。
  */
-
-- (void) runTransactionBlock:(WTransactionResult* (^) (WMutableData* currentData))block andCompletionBlock:(void (^) (NSError* error, BOOL committed, WDataSnapshot* snapshot))completionBlock;
+- (void) runTransactionBlock:(WTransactionResult* (^) (WMutableData* currentData))block andCompletionBlock:(void (^) (NSError *__nullable error, BOOL committed, WDataSnapshot *__nullable snapshot))completionBlock;
 
 
 /**
- * 执行并发事务
- *
- * 当操作到达服务器后，发现有新数据，块(block)将再次运行，来自服务器的最新数据。
- *
- * 当块(block)运行时，你的可能需要终止事务， 调用[FTransactionResult abort].
- *
- * @param block    块(block)接收的当前数据(currentData)，然后返回一个WTransactionResult对象。
- * @param localEvents  将其设置为NO来抑制提出的中间状态的事件，只有基于事务的最终状态获取事件。
+ 更新当前路径下的数据。服务器数据将会在 block 中返回，我们所要做的就是在 block 中
+ 把数据改成你要想要的，然后返回到 WTransactionResult 中。
+ 
+ 如果这个节点数据发送到服务器上时已经被其他人修改过，那么这个 block 将会获取服务器
+ 最新数据再次执行。
+ 
+ 调用 [FTransactionResult abort] 可以取消这次操作。
+ 
+  @param block    块(block)接收的当前数据(currentData)，然后返回一个WTransactionResult对象。
+  @param completionBlock 当事务完成时这个块将被触发，无论成功与否。
+  @param localEvents  将其设置为 NO 来阻止触发中间状态的事件，只触发最终状态事件。
  */
-- (void) runTransactionBlock:(WTransactionResult* (^) (WMutableData* currentData))block andCompletionBlock:(void (^) (NSError* error, BOOL committed, WDataSnapshot* snapshot))completionBlock withLocalEvents:(BOOL)localEvents;
+- (void) runTransactionBlock:(WTransactionResult* (^) (WMutableData* currentData))block andCompletionBlock:(nullable void (^) (NSError *__nullable error, BOOL committed, WDataSnapshot *__nullable snapshot))completionBlock withLocalEvents:(BOOL)localEvents;
+
+
+/** @name 检索字符串描述 */
 
 
 /**
@@ -650,7 +677,7 @@
 /**
  *  获取父节点的引用。如果当前节点就是root节点，方法执行后返回的依然是root节点的引用。
  */
-@property (strong, readonly, nonatomic) Wilddog *parent;
+@property (strong, readonly, nonatomic, nullable) Wilddog *parent;
 
 
 /**
@@ -669,6 +696,9 @@
  *  根据引用获得 WilddogApp 实例。
  */
 @property (strong, readonly, nonatomic) WilddogApp *app;
+
+
+/** @name 全局配置和设置 */
 
 
 /**
@@ -699,7 +729,9 @@
  *
  *  @param queue 给所有的Wilddog事件类型设置的默认队列
  */
-+ (void)setDispatchQueue:(dispatch_queue_t)queue;
++ (void)setDispatchQueue:(dispatch_queue_t)queue __attribute__((deprecated("Use [Wilddog defaultConfig].callbackQueue instead")));
 
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -10,6 +10,8 @@
 
 @class Wilddog;
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *
  */
@@ -54,7 +56,7 @@
 /**
  *  返回节点的原始数据
  */
-- (id) valueInExportFormat;
+- (id __nullable) valueInExportFormat;
 
 
 /**
@@ -75,7 +77,7 @@
  *  NSNumber (包含Bool类型)
  *  NSString
  */
-@property (strong, readonly, nonatomic) id value;
+@property (strong, readonly, nonatomic, nullable) id value;
 
 
 /**
@@ -111,6 +113,8 @@
  *
  * @return 优先级是一个字符串，若没有设置priority，则返回nil
  */
-@property (strong, readonly, nonatomic) id priority;
+@property (strong, readonly, nonatomic, nullable) id priority;
 
 @end
+
+NS_ASSUME_NONNULL_END

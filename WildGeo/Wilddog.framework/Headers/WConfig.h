@@ -8,37 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 /**
- * Configuration object for Wilddog.  You can get the default WConfig object via
- * `[Wilddog defaultConfig]` and modify it.  You must make all changes to it before
- * you create your first Wilddog instance.
+   为 Wilddog 配置对象。您可以通过 [Wilddog defaultConfig] 方法获取默认 WConfig 对象并修改它。
+   在创建第一个 Wilddog 实例之前，你必须先对它做出更改。
  */
 @interface WConfig : NSObject
 
+
 /**
- * By default the Wilddog client will keep data in memory while your application is running, but not
- * when it is restarted. By setting this value to YES, the data will be persisted to on-device (disk)
- * storage and will thus be available again when the app is restarted (even when there is no network
- * connectivity at that time). Note that this property must be set before creating your first Wilddog
- * reference and only needs to be called once per application.
- *
- * If your app uses Wilddog Authentication, the client will automatically persist the user's authentication
- * token across restarts, even without persistence enabled. But if the auth token expired while offline and
- * you've enabled persistence, the client will pause write operations until you successfully re-authenticate
- * (or explicitly unauthenticate) to prevent your writes from being sent unauthenticated and failing due to
- * security rules.
+ * 默认情况下，在你的应用程序正在运行时，Wilddog 客户端会将数据保存在内存中，当应用被重新启动时数据就没有了。
+   把这个值设置为 YES 时，数据将被保存到设备，并且当应用程序重新启动时（即使在重新启动程序时没有网络连接），
+   这些存储的数据也是可以用的。请注意，此属性必须在创建第一个Wilddog 引用之前设置，并且每次启用应用程序只需
+   要调用一次即可。
+ 
+   如果你的应用使用了 Wilddog 认证，客户端将自动保存用户的身份验证 token ，即使没有启用数据持久化。但是，
+   如果身份验证令牌在离线的时候过期，并且你打开了数据持久化，客户端将暂停写入操作，直到你成功地重新进行身份
+   验证。这样做是因为防止写入的数据被发送给未经验证的用户和因安全规则的改变造成写入数据失败。
  */
 @property (nonatomic) BOOL persistenceEnabled;
 
+
 /**
- * By default Wilddog will use up to 10MB of disk space to cache data. If the cache grows beyond this size,
- * Wilddog will start removing data that hasn't been recently used. If you find that your application caches too
- * little or too much data, call this method to change the cache size. This property must be set before creating
- * your first Wilddog reference and only needs to be called once per application.
- *
- * Note that the specified cache size is only an approximation and the size on disk may temporarily exceed it
- * at times.
+ * 默认情况下，Wilddog 将占用最大10MB的磁盘空间去缓存数据。如果缓存大小超出此空间，Wilddog 将开始移除最
+   近未使用的数据。如果你发现你的应用程序缓存太少或有过多的数据，调用此方法来更改缓存空间的大小。此属性必
+   须在创建第一个 Wilddog 引用之前设置，并且每次启用应用程序只需要调用一次即可。
+   请注意，指定缓存大小只是一个近似值，并在磁盘上的大小有时候可能会暂时超过它。
  */
 @property (nonatomic) NSUInteger persistenceCacheSizeBytes;
 
@@ -48,3 +44,5 @@
 @property (nonatomic, strong) dispatch_queue_t callbackQueue;
 
 @end
+
+NS_ASSUME_NONNULL_END

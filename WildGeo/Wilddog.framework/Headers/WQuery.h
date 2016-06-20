@@ -10,6 +10,8 @@
 #import "WEventType.h"
 #import "WDataSnapshot.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef int64_t WilddogHandle;
 @class WDataSnapshot;
 
@@ -59,7 +61,7 @@ typedef int64_t WilddogHandle;
  * @param block 当监听到初始数据和初始数据发生变化时，这个block将被回调。block将传输一个WDataSnapshot类型的数据和前一个子节点的key
  * @return 一个WilddogHandle，用于调用函数 removeObserverWithHandle: 去注销这个block
  */
-- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block;
+- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable prevKey))block;
 
 
 /**
@@ -73,7 +75,7 @@ typedef int64_t WilddogHandle;
  *
  *  @return 一个WilddogHandle，用于调用函数 removeObserverWithHandle: 去注销这个block
  */
-- (WilddogHandle) observeEventType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (WilddogHandle) observeEventType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 /**
@@ -90,7 +92,7 @@ typedef int64_t WilddogHandle;
  *
  * @return  一个WilddogHandle，用于调用函数 removeObserverWithHandle: 去注销这个block
  */
-- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (WilddogHandle) observeEventType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable prevKey))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 /**
@@ -108,7 +110,7 @@ typedef int64_t WilddogHandle;
  * @param eventType 监听的事件类型
  * @param block block 当监听到初始数据和初始数据发生变化时，这个block将被回调。block将传输一个WDataSnapshot类型的数据和前一个子节点的key
  */
-- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block;
+- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable prevKey))block;
 
 
 /**
@@ -118,7 +120,7 @@ typedef int64_t WilddogHandle;
  *  @param block       当监听到某事件时，回调block
  *  @param cancelBlock 如果您没有权限访问此数据，将调用该cancelBlock
  */
-- (void) observeSingleEventOfType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (void) observeSingleEventOfType:(WEventType)eventType withBlock:(void (^)(WDataSnapshot* snapshot))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 /**
@@ -130,7 +132,7 @@ typedef int64_t WilddogHandle;
  * @param block 将传输一个WDataSnapshot类型的数据和前一个子节点的key
  * @param cancelBlock 如果您没有权限访问此数据，将调用该cancelBlock
  */
-- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString* prevKey))block withCancelBlock:(void (^)(NSError* error))cancelBlock;
+- (void) observeSingleEventOfType:(WEventType)eventType andPreviousSiblingKeyWithBlock:(void (^)(WDataSnapshot* snapshot, NSString *__nullable prevKey))block withCancelBlock:(nullable void (^)(NSError* error))cancelBlock;
 
 
 /** @name 移除观察者 */
@@ -147,6 +149,15 @@ typedef int64_t WilddogHandle;
  *  取消之前由 observeEventType:withBlock:注册的所有的监听事件。
  */
 - (void) removeAllObservers;
+
+
+/**
+   在某一节点处通过调用`keepSynced:YES`方法，即使该节点处没有设置监听者，此节点处的数据也将自动下
+   载存储并保持同步。
+ 
+   @param keepSynced 参数设置为 YES，则在此节点处同步数据，设置为 NO，停止同步。
+ */
+- (void) keepSynced:(BOOL)keepSynced;
 
 
 /** @name 查询和限制 */
@@ -214,7 +225,7 @@ typedef int64_t WilddogHandle;
  * @param startValue query查询到的值均大于等于startValue
  * @return 返回一个WQuery查询器类，用于响应在数据值大于或等于startValue的节点事件
  */
-- (WQuery *) queryStartingAtValue:(id)startValue;
+- (WQuery *) queryStartingAtValue:(nullable id)startValue;
 
 
 /**
@@ -224,7 +235,7 @@ typedef int64_t WilddogHandle;
  * @param childKey query查询到的key均大于等于childKey
  * @return 返回一个WQuery查询器类，用于响应在数据值大于startValue，或等于startValue的值并且key大于或等于childKey的节点事件
  */
-- (WQuery *) queryStartingAtValue:(id)startValue childKey:(NSString *)childKey;
+- (WQuery *) queryStartingAtValue:(nullable id)startValue childKey:(nullable NSString *)childKey;
 
 
 /**
@@ -233,7 +244,7 @@ typedef int64_t WilddogHandle;
  * @param endValue query查询到的值均小于等于endValue
  * @return 返回一个WQuery查询器类，用于响应在数据值均小于或等于endValue的节点事件
  */
-- (WQuery *) queryEndingAtValue:(id)endValue;
+- (WQuery *) queryEndingAtValue:(nullable id)endValue;
 
 
 /**
@@ -243,7 +254,7 @@ typedef int64_t WilddogHandle;
  * @param childKey query查询到的key均小于等于childKey
  * @return 返回一个WQuery查询器类，用于响应在查询到的数据值小于endValue，或者数据值等于endValue并且key小于等于childKey的节点事件
  */
-- (WQuery *) queryEndingAtValue:(id)endValue childKey:(NSString *)childKey;
+- (WQuery *) queryEndingAtValue:(nullable id)endValue childKey:(nullable NSString *)childKey;
 
 
 /**
@@ -252,7 +263,7 @@ typedef int64_t WilddogHandle;
  * @param value query查询到的值都等于value
  * @return 返回一个WQuery查询器类，用于响应这个与之相等数值节点事件
  */
-- (WQuery *) queryEqualToValue:(id)value;
+- (WQuery *) queryEqualToValue:(nullable id)value;
 
 
 /**
@@ -262,6 +273,8 @@ typedef int64_t WilddogHandle;
  * @param childKey query查询到的key都等于childKey
  * @return 返回一个WQuery查询器类，用于响应这个与之相等数值和key节点事件
  */
-- (WQuery *) queryEqualToValue:(id)value childKey:(NSString *)childKey;
+- (WQuery *) queryEqualToValue:(nullable id)value childKey:(nullable NSString *)childKey;
 
 @end
+
+NS_ASSUME_NONNULL_END

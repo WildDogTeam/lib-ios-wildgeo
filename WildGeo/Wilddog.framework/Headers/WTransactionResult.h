@@ -9,21 +9,28 @@
 #import <Foundation/Foundation.h>
 #import "WMutableData.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
+/**
+ *  用于 runTransactionBlock: 方法中，WTransactionResult 实例是事务处理结果的载体
+ */
 @interface WTransactionResult : NSObject
 
 /**
- * Used for runTransactionBlock:. Indicates that the new value should be saved at this location
+ * 用于 runTransactionBlock: 方法中。 表明传入参数 value 应保存在这个节点处
  *
- * @param value An FMutableData instance containing the new value to be set
- * @return An FTransactionResult instance that can be used as a return value from the block given to runTransactionBlock:
+ * @param value 一个包含新 value 的 WMutableData 实例
+ * @return 返回一个 WTransactionResult 实例，它可以作为给 runTransactionBlock: 方法中 block 的一个返回值
  */
 + (WTransactionResult *) successWithValue:(WMutableData *)value;
 
 
 /**
- * Used for runTransactionBlock:. Indicates that the current transaction should no longer proceed.
+ * 用于 runTransactionBlock: 方法中。 使用该方法可以主动终止当前事务
  *
- * @return An FTransactionResult instance that can be used as a return value from the block given to runTransactionBlock:
+ * @return 返回一个 WTransactionResult 实例，它可以作为给 runTransactionBlock: 方法中 block 的一个返回值
  */
 + (WTransactionResult *) abort;
 @end
+
+NS_ASSUME_NONNULL_END
