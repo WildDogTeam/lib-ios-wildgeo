@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
 #import "WildGeo.h"
-#import <Wilddog/Wilddog.h>
+#import <WilddogSync/WilddogSync.h>
 
 
 #import "aninotation.h"

@@ -10,7 +10,7 @@
 #import "WildGeo+Private.h"
 #import "GWGeoHash.h"
 #import "GWQuery+Private.h"
-#import <Wilddog/Wilddog.h>
+#import <WilddogSync/WilddogSync.h>
 
 NSString * const kWildGeoErrorDomain = @"com.wilddog.geowild";
 

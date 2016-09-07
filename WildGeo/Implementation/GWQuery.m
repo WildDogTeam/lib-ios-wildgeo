@@ -13,7 +13,7 @@
 #import "WildGeo.h"
 #import "WildGeo+Private.h"
 #import "GWGeoHashQuery.h"
-#import <Wilddog/Wilddog.h>
+#import <WilddogSync/WilddogSync.h>
 
 @interface GWQueryLocationInfo : NSObject
 
@@ -55,9 +55,10 @@
     self = [super initWithWildGeo:geoFire];
     if (self != nil) {
         if (!CLLocationCoordinate2DIsValid(location.coordinate)) {
-            [NSException raise:NSInvalidArgumentException
-                        format:@"Not a valid geo location: [%f,%f]",
-             location.coordinate.latitude, location.coordinate.longitude];
+            NSLog(@"Not a valid geo location: [%f,%f]",location.coordinate.latitude, location.coordinate.longitude);
+//            [NSException raise:NSInvalidArgumentException
+//                        format:@"Not a valid geo location: [%f,%f]",
+//             location.coordinate.latitude, location.coordinate.longitude];
         }
         _centerLocation = location;
         _radius = radius;
@@ -69,9 +70,10 @@
 {
     @synchronized(self) {
         if (!CLLocationCoordinate2DIsValid(center.coordinate)) {
-            [NSException raise:NSInvalidArgumentException
-                        format:@"Not a valid geo location: [%f,%f]",
-             center.coordinate.latitude, center.coordinate.longitude];
+            NSLog(@"Not a valid geo location: [%f,%f]",center.coordinate.latitude, center.coordinate.longitude);
+//            [NSException raise:NSInvalidArgumentException
+//                        format:@"Not a valid geo location: [%f,%f]",
+//             center.coordinate.latitude, center.coordinate.longitude];
         }
         _centerLocation = center;
         [self searchCriteriaDidChange];

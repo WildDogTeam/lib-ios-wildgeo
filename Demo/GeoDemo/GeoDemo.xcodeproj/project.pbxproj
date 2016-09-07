@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		395109CF1D7FF00500FBF6BC /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 395109CE1D7FF00500FBF6BC /* libsqlite3.tbd */; };
+		395109D31D7FF24E00FBF6BC /* WilddogSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395109D21D7FF24E00FBF6BC /* WilddogSync.framework */; };
 		EA13AF551BC6A40B004E6EBF /* libWildGeo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA13AF141BC6A375004E6EBF /* libWildGeo.a */; };
 		EA2E64711BB53EFA006E3918 /* GeoDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2E64701BB53EFA006E3918 /* GeoDemoTests.m */; };
 		EA2E647C1BB53EFA006E3918 /* GeoDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA2E647B1BB53EFA006E3918 /* GeoDemoUITests.m */; };
 		EA2E64921BB540D2006E3918 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2E64911BB540D2006E3918 /* MapKit.framework */; };
 		EA2E64991BB54611006E3918 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2E64981BB54611006E3918 /* JavaScriptCore.framework */; };
-		EA4CF1731BC68C07002F6735 /* aninotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1661BC68C07002F6735 /* aninotation.m */; settings = {ASSET_TAGS = (); }; };
-		EA4CF1741BC68C07002F6735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1681BC68C07002F6735 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		EA4CF1751BC68C07002F6735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF1691BC68C07002F6735 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		EA4CF1761BC68C07002F6735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16A1BC68C07002F6735 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		EA4CF1771BC68C07002F6735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16C1BC68C07002F6735 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		EA4CF1781BC68C07002F6735 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16E1BC68C07002F6735 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		EA4CF1791BC68C07002F6735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF16F1BC68C07002F6735 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		EA4CF17A1BC68C07002F6735 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1711BC68C07002F6735 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EA4CF17B1BC68C07002F6735 /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4CF1721BC68C07002F6735 /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
-		EA77F9E61BC68782009A70EA /* Wilddog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA77F9E51BC68782009A70EA /* Wilddog.framework */; settings = {ASSET_TAGS = (); }; };
+		EA4CF1731BC68C07002F6735 /* aninotation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1661BC68C07002F6735 /* aninotation.m */; };
+		EA4CF1741BC68C07002F6735 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1681BC68C07002F6735 /* AppDelegate.m */; };
+		EA4CF1751BC68C07002F6735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF1691BC68C07002F6735 /* Assets.xcassets */; };
+		EA4CF1761BC68C07002F6735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16A1BC68C07002F6735 /* LaunchScreen.storyboard */; };
+		EA4CF1771BC68C07002F6735 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16C1BC68C07002F6735 /* Main.storyboard */; };
+		EA4CF1781BC68C07002F6735 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4CF16E1BC68C07002F6735 /* Info.plist */; };
+		EA4CF1791BC68C07002F6735 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF16F1BC68C07002F6735 /* main.m */; };
+		EA4CF17A1BC68C07002F6735 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4CF1711BC68C07002F6735 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		395109CE1D7FF00500FBF6BC /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		395109D21D7FF24E00FBF6BC /* WilddogSync.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WilddogSync.framework; path = GeoDemo/WilddogSync.framework; sourceTree = "<group>"; };
 		EA13AF0F1BC6A375004E6EBF /* WildGeo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WildGeo.xcodeproj; path = ../../WildGeo.xcodeproj; sourceTree = "<group>"; };
 		EA2E64531BB53EFA006E3918 /* GeoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2E646C1BB53EFA006E3918 /* GeoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +80,6 @@
 		EA4CF1701BC68C07002F6735 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EA4CF1711BC68C07002F6735 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EA4CF1721BC68C07002F6735 /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wilddog.framework; sourceTree = "<group>"; };
-		EA77F9E51BC68782009A70EA /* Wilddog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wilddog.framework; path = GeoDemo/Wilddog.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +87,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395109D31D7FF24E00FBF6BC /* WilddogSync.framework in Frameworks */,
+				395109CF1D7FF00500FBF6BC /* libsqlite3.tbd in Frameworks */,
 				EA13AF551BC6A40B004E6EBF /* libWildGeo.a in Frameworks */,
-				EA4CF17B1BC68C07002F6735 /* Wilddog.framework in Frameworks */,
 				EA2E64991BB54611006E3918 /* JavaScriptCore.framework in Frameworks */,
 				EA2E64921BB540D2006E3918 /* MapKit.framework in Frameworks */,
-				EA77F9E61BC68782009A70EA /* Wilddog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,9 +123,10 @@
 		EA2E644A1BB53EFA006E3918 = {
 			isa = PBXGroup;
 			children = (
+				395109D21D7FF24E00FBF6BC /* WilddogSync.framework */,
+				395109CE1D7FF00500FBF6BC /* libsqlite3.tbd */,
 				EA13AF0F1BC6A375004E6EBF /* WildGeo.xcodeproj */,
 				EA4CF1641BC68C07002F6735 /* GeoDemo */,
-				EA77F9E51BC68782009A70EA /* Wilddog.framework */,
 				EA2E64981BB54611006E3918 /* JavaScriptCore.framework */,
 				EA2E64911BB540D2006E3918 /* MapKit.framework */,
 				EA2E646F1BB53EFA006E3918 /* GeoDemoTests */,

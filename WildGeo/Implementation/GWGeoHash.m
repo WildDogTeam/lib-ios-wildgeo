@@ -35,8 +35,9 @@
              (GF_MAX_PRECISION+1)];
         }
         if (!CLLocationCoordinate2DIsValid(location)) {
-            [NSException raise:NSInvalidArgumentException
-                        format:@"Not a valid geo location: [%f,%f]", location.latitude, location.longitude];
+            NSLog(@"Not a valid geo location: [%f,%f]",location.latitude, location.longitude);
+//            [NSException raise:NSInvalidArgumentException
+//                        format:@"Not a valid geo location: [%f,%f]", location.latitude, location.longitude];
         }
 
         double longitudeRange[] = { -180 , 180 };
