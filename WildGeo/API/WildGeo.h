@@ -34,7 +34,7 @@
 #import "GWCircleQuery.h"
 #import "GWRegionQuery.h"
 
-@class Wilddog;
+#import <WilddogSync/WilddogSync.h>
 
 typedef void (^GFCompletionBlock) (NSError *error);
 typedef void (^GFCallbackBlock) (CLLocation *location, NSError *error);
@@ -47,7 +47,7 @@ typedef void (^GFCallbackBlock) (CLLocation *location, NSError *error);
 /**
  * The wilddog reference this WildGeo instance uses.
  */
-@property (nonatomic, strong, readonly) Wilddog *wilddogRef;
+@property (nonatomic, strong, readonly) WDGSyncReference *wilddogRef;
 
 /**
  * The dispatch queue this WildGeo object and all its GFQueries use for callbacks.
@@ -61,7 +61,7 @@ typedef void (^GFCallbackBlock) (CLLocation *location, NSError *error);
  * @param wilddog The wilddog location to attach this WildGeo instance to
  * @return The new WildGeo instance
  */
-- (id)initWithWilddogRef:(Wilddog *)wilddog;
+- (id)initWithWilddogRef:(WDGSyncReference *)wilddog;
 
 /** @name Setting and Updating Locations */
 

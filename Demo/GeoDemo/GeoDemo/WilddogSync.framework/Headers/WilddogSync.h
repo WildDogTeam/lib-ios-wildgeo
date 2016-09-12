@@ -8,13 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#ifndef WilddogSync_h
+#define WilddogSync_h
 
-//! Project version number for WilddogSync.
-FOUNDATION_EXPORT double WilddogSyncVersionNumber;
+#import "WDGSync.h"
+#import "WDGSyncQuery.h"
+#import "WDGSyncReference.h"
+#import "WDGDataEventType.h"
+#import "WDGDataSnapshot.h"
+#import "WDGMutableData.h"
+#import "WDGServerValue.h"
+#import "WDGTransactionResult.h"
 
-//! Project version string for WilddogSync.
-FOUNDATION_EXPORT const unsigned char WilddogSyncVersionString[];
-
-#import "Wilddog.h"
+#endif /* WilddogSync_h */
 
 

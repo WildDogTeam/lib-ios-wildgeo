@@ -197,7 +197,7 @@
     return self;
 }
 
-- (WQuery *)wilddogForGeoHashQuery:(GWGeoHashQuery *)query
+- (WDGSyncQuery *)wilddogForGeoHashQuery:(GWGeoHashQuery *)query
 {
     return [[[self.geoFire.wilddogRef queryOrderedByChild:@"g"] queryStartingAtValue:query.startValue]
             queryEndingAtValue:query.endValue];
@@ -259,7 +259,7 @@
     return NO;
 }
 
-- (void)childAdded:(WDataSnapshot *)snapshot
+- (void)childAdded:(WDGDataSnapshot *)snapshot
 {
     @synchronized(self) {
         CLLocation *location = [WildGeo locationFromValue:snapshot.value];
@@ -271,7 +271,7 @@
     }
 }
 
-- (void)childChanged:(WDataSnapshot *)snapshot
+- (void)childChanged:(WDGDataSnapshot *)snapshot
 {
     @synchronized(self) {
         CLLocation *location = [WildGeo locationFromValue:snapshot.value];
@@ -283,13 +283,13 @@
     }
 }
 
-- (void)childRemoved:(WDataSnapshot *)snapshot
+- (void)childRemoved:(WDGDataSnapshot *)snapshot
 {
     @synchronized(self) {
         NSString *key = snapshot.key;
         GWQueryLocationInfo *info = self.locationInfos[snapshot.key];
         if (info != nil) {
-            [[self.geoFire wilddogRefForLocationKey:snapshot.key] observeSingleEventOfType:WEventTypeValue withBlock:^(WDataSnapshot *snapshot) {
+            [[self.geoFire wilddogRefForLocationKey:snapshot.key] observeSingleEventOfType:WDGDataEventTypeValue withBlock:^(WDGDataSnapshot *snapshot) {
                 @synchronized(self) {
                     CLLocation *location = [WildGeo locationFromValue:snapshot.value];
                     GWGeoHash *geoHash = (location) ? [[GWGeoHash alloc] initWithLocation:location.coordinate] : nil;
@@ -358,7 +358,7 @@
             [NSException raise:NSInternalInconsistencyException
                         format:@"Wanted to remove a geohash query that was not registered!"];
         }
-        WQuery *querywilddog = [self wilddogForGeoHashQuery:query];
+        WDGSyncQuery *querywilddog = [self wilddogForGeoHashQuery:query];
         [querywilddog removeObserverWithHandle:handle.childAddedHandle];
         [querywilddog removeObserverWithHandle:handle.childChangedHandle];
         [querywilddog removeObserverWithHandle:handle.childRemovedHandle];
@@ -368,21 +368,21 @@
     [toAdd enumerateObjectsUsingBlock:^(GWGeoHashQuery *query, BOOL *stop) {
         [self.outstandingQueries addObject:query];
         GWGeoHashQueryHandle *handle = [[GWGeoHashQueryHandle alloc] init];
-        WQuery *querywilddog = [self wilddogForGeoHashQuery:query];
-        handle.childAddedHandle = [querywilddog observeEventType:WEventTypeChildAdded
-                                                        withBlock:^(WDataSnapshot *snapshot) {
+        WDGSyncQuery *querywilddog = [self wilddogForGeoHashQuery:query];
+        handle.childAddedHandle = [querywilddog observeEventType:WDGDataEventTypeChildAdded
+                                                        withBlock:^(WDGDataSnapshot *snapshot) {
                                                             [self childAdded:snapshot];
                                                         }];
-        handle.childChangedHandle = [querywilddog observeEventType:WEventTypeChildChanged
-                                                          withBlock:^(WDataSnapshot *snapshot) {
+        handle.childChangedHandle = [querywilddog observeEventType:WDGDataEventTypeChildChanged
+                                                          withBlock:^(WDGDataSnapshot *snapshot) {
                                                               [self childChanged:snapshot];
                                                           }];
-        handle.childRemovedHandle = [querywilddog observeEventType:WEventTypeChildRemoved
-                                                          withBlock:^(WDataSnapshot *snapshot) {
+        handle.childRemovedHandle = [querywilddog observeEventType:WDGDataEventTypeChildRemoved
+                                                          withBlock:^(WDGDataSnapshot *snapshot) {
                                                               [self childRemoved:snapshot];
                                                           }];
-        [querywilddog observeSingleEventOfType:WEventTypeValue
-                                      withBlock:^(WDataSnapshot *snapshot) {
+        [querywilddog observeSingleEventOfType:WDGDataEventTypeValue
+                                      withBlock:^(WDGDataSnapshot *snapshot) {
                                           @synchronized(self) {
                                               [self.outstandingQueries removeObject:query];
                                               [self checkAndFireReadyEvent];
@@ -413,7 +413,7 @@
             [NSException raise:NSInternalInconsistencyException
                         format:@"Wanted to remove a geohash query that was not registered!"];
         }
-        WQuery *querywilddog = [self wilddogForGeoHashQuery:query];
+        WDGSyncQuery *querywilddog = [self wilddogForGeoHashQuery:query];
         [querywilddog removeObserverWithHandle:handle.childAddedHandle];
         [querywilddog removeObserverWithHandle:handle.childChangedHandle];
         [querywilddog removeObserverWithHandle:handle.childRemovedHandle];

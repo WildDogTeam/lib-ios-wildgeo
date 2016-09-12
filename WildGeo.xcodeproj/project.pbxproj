@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		395109D71D7FF34200FBF6BC /* WilddogSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 395109D61D7FF34200FBF6BC /* WilddogSync.framework */; };
+		399FB47B1D865B270018D716 /* WilddogCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399FB4791D865B270018D716 /* WilddogCore.framework */; };
+		399FB47C1D865B270018D716 /* WilddogSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399FB47A1D865B270018D716 /* WilddogSync.framework */; };
 		EA13AF451BC6A3C3004E6EBF /* GWCircleQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA13AF461BC6A3C3004E6EBF /* GWQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF371BC6A3C3004E6EBF /* GWQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA13AF471BC6A3C3004E6EBF /* GWRegionQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,7 +38,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		395109D61D7FF34200FBF6BC /* WilddogSync.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WilddogSync.framework; sourceTree = "<group>"; };
+		399FB4791D865B270018D716 /* WilddogCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WilddogCore.framework; sourceTree = "<group>"; };
+		399FB47A1D865B270018D716 /* WilddogSync.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WilddogSync.framework; sourceTree = "<group>"; };
 		EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWCircleQuery.h; sourceTree = "<group>"; };
 		EA13AF371BC6A3C3004E6EBF /* GWQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWQuery.h; sourceTree = "<group>"; };
 		EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWRegionQuery.h; sourceTree = "<group>"; };
@@ -60,7 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				395109D71D7FF34200FBF6BC /* WilddogSync.framework in Frameworks */,
+				399FB47C1D865B270018D716 /* WilddogSync.framework in Frameworks */,
+				399FB47B1D865B270018D716 /* WilddogCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +73,8 @@
 		EA13AF341BC6A3C3004E6EBF /* WildGeo */ = {
 			isa = PBXGroup;
 			children = (
-				395109D61D7FF34200FBF6BC /* WilddogSync.framework */,
+				399FB4791D865B270018D716 /* WilddogCore.framework */,
+				399FB47A1D865B270018D716 /* WilddogSync.framework */,
 				EA13AF351BC6A3C3004E6EBF /* API */,
 				EA13AF3A1BC6A3C3004E6EBF /* Implementation */,
 			);

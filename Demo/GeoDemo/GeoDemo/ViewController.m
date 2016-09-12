@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import "WildGeo.h"
 #import <WilddogSync/WilddogSync.h>
-
+#import <WilddogCore/WilddogCore.h>
 
 #import "aninotation.h"
 
@@ -21,7 +21,7 @@
 
 #define CIRCLE_FRACTION (3.0/4.0)
 
-#define GEO_WILD_URL @"https://wang.wilddogio.com/_geo"
+#define GEO_WILD_URL @"https://wang.wilddogio.com"
 
 @interface ViewController ()
 
@@ -48,7 +48,13 @@
 {
     self = [super initWithCoder:coder];
     if (self != nil) {
-        self.geoWilddog = [[WildGeo alloc] initWithWilddogRef:[[Wilddog alloc] initWithUrl:GEO_WILD_URL]];
+        //初始化 WDGApp
+        WDGOptions *option = [[WDGOptions alloc] initWithSyncURL:GEO_WILD_URL];
+        [WDGApp configureWithOptions:option];
+        //获取一个指向根节点的 WDGSyncReference 实例
+        WDGSyncReference *ref = [[WDGSync sync] referenceWithPath:@"_geo"];
+        
+        self.geoWilddog = [[WildGeo alloc] initWithWilddogRef:ref];
         self.vehicleAnnotations = [NSMutableDictionary dictionary];
         self.centerAnnotation = [[aninotation alloc] init];
     }

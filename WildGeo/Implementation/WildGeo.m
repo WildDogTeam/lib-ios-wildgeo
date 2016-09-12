@@ -10,6 +10,7 @@
 #import "WildGeo+Private.h"
 #import "GWGeoHash.h"
 #import "GWQuery+Private.h"
+#import <WilddogCore/WilddogCore.h>
 #import <WilddogSync/WilddogSync.h>
 
 NSString * const kWildGeoErrorDomain = @"com.wilddog.geowild";
@@ -20,7 +21,7 @@ enum {
 
 @interface WildGeo ()
 
-@property (nonatomic, strong, readwrite) Wilddog *wilddogRef;
+@property (nonatomic, strong, readwrite) WDGSyncReference *wilddogRef;
 
 @end
 
@@ -34,7 +35,7 @@ enum {
     return nil;
 }
 
-- (id)initWithWilddogRef:(Wilddog *)wilddogRef
+- (id)initWithWilddogRef:(WDGSyncReference *)wilddogRef
 {
     self = [super init];
     if (self != nil) {
@@ -66,7 +67,7 @@ withCompletionBlock:(GFCompletionBlock)block
                  withBlock:block];
 }
 
-- (Wilddog *)wilddogRefForLocationKey:(NSString *)key
+- (WDGSyncReference *)wilddogRefForLocationKey:(NSString *)key
 {
     static NSCharacterSet *illegalCharacters;
     static dispatch_once_t onceToken;
@@ -98,7 +99,7 @@ withCompletionBlock:(GFCompletionBlock)block
     }
     [[self wilddogRefForLocationKey:key] setValue:value
                                        andPriority:priority
-                               withCompletionBlock:^(NSError *error, Wilddog *ref) {
+                               withCompletionBlock:^(NSError *error, WDGSyncReference *ref) {
         if (block != nil) {
             dispatch_async(self.callbackQueue, ^{
                 block(error);
@@ -140,8 +141,8 @@ withCompletionBlock:(GFCompletionBlock)block
 - (void)getLocationForKey:(NSString *)key withCallback:(GFCallbackBlock)callback
 {
     [[self wilddogRefForLocationKey:key]
-     observeSingleEventOfType:WEventTypeValue
-     withBlock:^(WDataSnapshot *snapshot) {
+     observeSingleEventOfType:WDGDataEventTypeValue
+     withBlock:^(WDGDataSnapshot *snapshot) {
          dispatch_async(self.callbackQueue, ^{
              if (snapshot.value == nil || [snapshot.value isMemberOfClass:[NSNull class]]) {
                  callback(nil, nil);

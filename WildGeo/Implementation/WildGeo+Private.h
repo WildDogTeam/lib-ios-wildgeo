@@ -11,7 +11,7 @@
 
 @interface WildGeo (Private)
 
-- (Wilddog *)wilddogRefForLocationKey:(NSString *)key;
+- (WDGSyncReference *)wilddogRefForLocationKey:(NSString *)key;
 
 + (CLLocation *)locationFromValue:(id)dict;
 + (NSDictionary *)dictFromLocation:(CLLocation *)location;
