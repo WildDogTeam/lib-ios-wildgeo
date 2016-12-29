@@ -1,0 +1,12 @@
+# Xcode
+
+*.xcuserstate
+.DS_Store
+Pods/
+Podfile.lock
+*.xcworkspace
+
+GeoDemo/*.xcuserstate
+GeoDemo/Pods/
+GeoDemo/Podfile.lock
+GeoDemo/*.xcworkspace

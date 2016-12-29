@@ -78,7 +78,7 @@ withCompletionBlock:(GFCompletionBlock)block
         [NSException raise:NSInvalidArgumentException
                     format:@"Not a valid WildGeo key: \"%@\". Characters .#$][/ not allowed in key!", key];
     }
-    return [self.wilddogRef childByAppendingPath:key];
+    return [self.wilddogRef child:key];
 }
 
 - (void)setLocationValue:(CLLocation *)location

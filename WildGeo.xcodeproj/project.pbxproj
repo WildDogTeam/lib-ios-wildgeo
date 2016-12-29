@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		399FB47B1D865B270018D716 /* WilddogCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399FB4791D865B270018D716 /* WilddogCore.framework */; };
 		399FB47C1D865B270018D716 /* WilddogSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 399FB47A1D865B270018D716 /* WilddogSync.framework */; };
+		E574C01075A08808D0D8C956 /* libPods-WildGeo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAFDA9C1A67D2908AB88352 /* libPods-WildGeo.a */; };
 		EA13AF451BC6A3C3004E6EBF /* GWCircleQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA13AF461BC6A3C3004E6EBF /* GWQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF371BC6A3C3004E6EBF /* GWQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA13AF471BC6A3C3004E6EBF /* GWRegionQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,9 @@
 /* Begin PBXFileReference section */
 		399FB4791D865B270018D716 /* WilddogCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WilddogCore.framework; sourceTree = "<group>"; };
 		399FB47A1D865B270018D716 /* WilddogSync.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WilddogSync.framework; sourceTree = "<group>"; };
+		7678BFBB020311FDAED55F26 /* Pods-WildGeo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WildGeo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WildGeo/Pods-WildGeo.release.xcconfig"; sourceTree = "<group>"; };
+		A66E1BB2740F9575413DB174 /* Pods-WildGeo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WildGeo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WildGeo/Pods-WildGeo.debug.xcconfig"; sourceTree = "<group>"; };
+		BEAFDA9C1A67D2908AB88352 /* libPods-WildGeo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WildGeo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA13AF361BC6A3C3004E6EBF /* GWCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWCircleQuery.h; sourceTree = "<group>"; };
 		EA13AF371BC6A3C3004E6EBF /* GWQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWQuery.h; sourceTree = "<group>"; };
 		EA13AF381BC6A3C3004E6EBF /* GWRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWRegionQuery.h; sourceTree = "<group>"; };
@@ -64,12 +68,30 @@
 			files = (
 				399FB47C1D865B270018D716 /* WilddogSync.framework in Frameworks */,
 				399FB47B1D865B270018D716 /* WilddogCore.framework in Frameworks */,
+				E574C01075A08808D0D8C956 /* libPods-WildGeo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68950D3852AE3C3AF039092F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEAFDA9C1A67D2908AB88352 /* libPods-WildGeo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		820E9C133EA64B51B87C9BC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A66E1BB2740F9575413DB174 /* Pods-WildGeo.debug.xcconfig */,
+				7678BFBB020311FDAED55F26 /* Pods-WildGeo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EA13AF341BC6A3C3004E6EBF /* WildGeo */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +136,8 @@
 			children = (
 				EA13AF341BC6A3C3004E6EBF /* WildGeo */,
 				EA2E64151BB5321C006E3918 /* Products */,
+				820E9C133EA64B51B87C9BC2 /* Pods */,
+				68950D3852AE3C3AF039092F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,11 +175,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA77F9C21BC6638B009A70EA /* Build configuration list for PBXNativeTarget "WildGeo" */;
 			buildPhases = (
+				4C23A50E7A2A80BCFF51589F /* [CP] Check Pods Manifest.lock */,
 				EA77F9B81BC6638B009A70EA /* Sources */,
 				EA77F9B91BC6638B009A70EA /* Frameworks */,
 				EA77F9BA1BC6638B009A70EA /* CopyFiles */,
 				EA77F9D21BC6680A009A70EA /* Headers */,
 				EA77F9D81BC6694D009A70EA /* ShellScript */,
+				6590B50FC12C1F233113275E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,7 +198,7 @@
 		EA2E640C1BB5321C006E3918 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Wilddog;
 				TargetAttributes = {
 					EA77F9BB1BC6638B009A70EA = {
@@ -198,6 +224,36 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4C23A50E7A2A80BCFF51589F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6590B50FC12C1F233113275E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WildGeo/Pods-WildGeo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EA77F9D81BC6694D009A70EA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,8 +298,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -264,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -284,8 +342,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -300,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -309,6 +369,7 @@
 		};
 		EA77F9C31BC6638B009A70EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A66E1BB2740F9575413DB174 /* Pods-WildGeo.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -325,6 +386,7 @@
 		};
 		EA77F9C41BC6638B009A70EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7678BFBB020311FDAED55F26 /* Pods-WildGeo.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

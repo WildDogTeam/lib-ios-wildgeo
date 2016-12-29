@@ -59,16 +59,22 @@ A `WildGeo` object is used to read and write geo location data to your Wilddog d
 and to create queries. To create a new `WildGeo` instance you need to attach it to a Wilddog database reference:
 
 ##### Objective-C
-
-	Wilddog *geoRef = [[Wilddog alloc] 	initWithUrl:@"https://<your-Wilddog>.wildddogio.com/"];
+	
+	//初始化 WDGApp
+	WDGOptions *option = [[WDGOptions alloc] initWithSyncURL:@“https://<your-Wilddog>.wildddogio.com”];
+	[WDGApp configureWithOptions:option];
+	//获取一个指向根节点的 WDGSyncReference 实例
+	WDGSyncReference * geoRef = [[WDGSync sync] referenceWithPath:@"_geo"];
 	WildGeo *geo = [[WildGeo alloc] initWithWilddogRef:geoRef];
-
 
 ##### Swift
 
-	let geoRef = Wilddog(url: "https://<your-wilddog>.wilddogio.com/")
+    //初始化 WDGApp
+	let options = WDGOptions.init(syncURL: "https://<your-Wilddog>.wilddogio.com")
+	WDGApp.configureWithOptions(options)
+	//获取一个指向根节点的 WDGSyncReference 实例
+	geoRef = WDGSync.sync().reference()
 	let geo = WildGeo(geoRef: geoRef)
-
 
 Note that you can point your reference to anywhere in your Wilddog database.
 
@@ -270,11 +276,11 @@ WildGeo 需要 Wilddog 来同步和存储数据。您可以在这里[注册](htt
 
 ## 相关文档
 
-* [Wilddog 概览](https://z.wilddog.com/overview/introduction)
-* [IOS SDK快速入门](https://z.wilddog.com/ios/quickstart)
-* [IOS SDK API](https://z.wilddog.com/ios/api)
-* [下载页面](https://www.wilddog.com/download/)
-* [Wilddog FAQ](https://z.wilddog.com/questions)
+* [Wilddog 概览](https://docs.wilddog.com/overview/index.html)
+* [IOS SDK快速入门](https://docs.wilddog.com/overview/index.html)
+* [IOS SDK API](https://docs.wilddog.com/api/sync/ios/WDGOptions.html)
+* [下载页面](https://docs.wilddog.com/quickstart/sync/ios.html)
+* [Wilddog FAQ](https://docs.wilddog.com/overview/index.html)
 
 
 ## License

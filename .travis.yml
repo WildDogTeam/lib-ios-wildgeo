@@ -1,5 +1,0 @@
-language: objective-c
-
-script:
-- xctool -project WildGeo.xcodeproj -scheme WilddogGeo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-
